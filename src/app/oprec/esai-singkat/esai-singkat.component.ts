@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FormGroup, FormBuilder, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-esai-singkat',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./esai-singkat.component.css']
 })
 export class EsaiSingkatComponent implements OnInit {
-
-  constructor() { }
+  constructor(private router: Router) {
+  }
 
   ngOnInit() {
+    console.log(sessionStorage.getItem('divisi').charAt(0));
   }
 
 }

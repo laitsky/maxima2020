@@ -1,0 +1,15 @@
+label {
+  display: block;
+}
+
+#textarea-container {
+  padding: 1em;
+}
+
+.text-input {
+  float: left;
+  width: 100%;
+  min-height: 75px;
+  resize: none;
+  border: 1px solid grey;
+}
