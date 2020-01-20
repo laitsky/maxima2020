@@ -1,1 +1,25 @@
-<p>penilaian-kepribadian works!</p>
+<table class="table-striped border">
+    <thead>
+        <tr>
+            <th>Number</th>
+            <th>Questions</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let question of questions | async; let i = index">
+            <td>{{ i+1 }}</td>
+            <td>{{ question.pertanyaan }}</td>
+            
+            <input type="radio" value="1" name="radio{{i+1}}"/>
+            <input type="radio" value="2" name="radio{{i+1}}"/>
+            <input type="radio" value="3" name="radio{{i+1}}"/>
+            <input type="radio" value="4" name="radio{{i+1}}"/>
+            <input type="radio" value="5" name="radio{{i+1}}"/>     
+            
+        </tr>
+        <input type="submit" value="Submit" (click)="consoles()">
+    </tbody>
+</table>
+
+
