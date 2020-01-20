@@ -18,7 +18,7 @@ export class PenilaianKepribadianComponent implements OnInit {
   }
 
   consoles(){
-    let escore = 20+
+    let eScore = 20+
     parseInt($('input[name="radio1"]:checked').val())-
     parseInt($('input[name="radio6"]:checked').val())+
     parseInt($('input[name="radio11"]:checked').val())-
@@ -29,9 +29,9 @@ export class PenilaianKepribadianComponent implements OnInit {
     parseInt($('input[name="radio36"]:checked').val())+
     parseInt($('input[name="radio41"]:checked').val())-
     parseInt($('input[name="radio46"]:checked').val());
-    console.log('E = ' + escore);
+    console.log('E = ' + eScore);
 
-    let ascore = 14-
+    let aScore = 14-
     parseInt($('input[name="radio2"]:checked').val())+
     parseInt($('input[name="radio7"]:checked').val())-
     parseInt($('input[name="radio12"]:checked').val())+
@@ -42,9 +42,9 @@ export class PenilaianKepribadianComponent implements OnInit {
     parseInt($('input[name="radio37"]:checked').val())+
     parseInt($('input[name="radio42"]:checked').val())+
     parseInt($('input[name="radio47"]:checked').val());
-    console.log('A = ' + ascore);
+    console.log('A = ' + aScore);
 
-    let nScore = 14+
+    let cScore = 14+
     parseInt($('input[name="radio3"]:checked').val())-
     parseInt($('input[name="radio8"]:checked').val())+
     parseInt($('input[name="radio13"]:checked').val())-
@@ -55,7 +55,7 @@ export class PenilaianKepribadianComponent implements OnInit {
     parseInt($('input[name="radio38"]:checked').val())+
     parseInt($('input[name="radio43"]:checked').val())+
     parseInt($('input[name="radio48"]:checked').val());
-    console.log('C = ' + nScore);
+    console.log('C = ' + cScore);
 
     let nscore = 38-
     parseInt($('input[name="radio4"]:checked').val())+
