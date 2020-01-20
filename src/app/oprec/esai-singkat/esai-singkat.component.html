@@ -1,1 +1,21 @@
-<p>esai-singkat works!</p>
+<div class="container">
+  <form (ngSubmit)="esaiFormSave()">
+    <div id="textarea-container">
+      <div class="form-group">
+        <label for="odyssey">Bagaimana kamu mendefinisikan <strong>odyssey</strong> sebagai tema MAXIMA 2020?</label>
+        <textarea id="odyssey" class="text-input" rows="7" cols="50"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="improvement-mxm">Apa yang akan kamu tingkatkan pada MAXIMA 2020?</label>
+        <textarea id="improvement-mxm" class="text-input" rows="7" cols="50"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="pertanyaan-divisi">Pertanyaan Divisi</label>
+        <textarea id="pertanyaan-divisi" class="text-input" rows="7" cols="50"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary btn-block">Kirim Esai</button>
+    </div>
+  </form>
+</div>
