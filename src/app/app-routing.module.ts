@@ -3,12 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { OprecWelcomeComponent } from './oprec/oprec-welcome/oprec-welcome.component';
 import { FormOprecComponent } from './oprec/form-oprec/form-oprec.component';
 import { EsaiSingkatComponent } from './oprec/esai-singkat/esai-singkat.component';
+import { PenilaianKepribadianComponent } from './oprec/penilaian-kepribadian/penilaian-kepribadian.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'oprec',
+    redirectTo: 'oprec/penilaian-kepribadian',
     pathMatch: 'full'
   },
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'oprec/esai-singkat',
     component: EsaiSingkatComponent
+  },
+  {
+    path: 'oprec/penilaian-kepribadian',
+    component: PenilaianKepribadianComponent
   }
 ];
 
