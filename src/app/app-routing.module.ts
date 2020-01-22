@@ -9,7 +9,7 @@ import { PenilaianKepribadianComponent } from './oprec/penilaian-kepribadian/pen
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'oprec/penilaian-kepribadian',
+    redirectTo: 'oprec',
     pathMatch: 'full'
   },
   {

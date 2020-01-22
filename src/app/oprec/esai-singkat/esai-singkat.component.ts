@@ -12,7 +12,7 @@ export class EsaiSingkatComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(sessionStorage.getItem('divisi').charAt(0));
+    console.log(sessionStorage.getItem('divisi'));
   }
 
 }

@@ -61,7 +61,7 @@
       <div class="form-group col-md-9">
         <select class="custom-select" formControlName="prodi" (change)="gantiProdi($event)">
           <option value="" disabled>Pilih Program Studi</option>
-          <option *ngFor="let prodi of Prodi" [ngValue]="prodi">{{prodi}}</option>
+          <option *ngFor="let prodi of Prodi" [value]="prodi">{{prodi}}</option>
         </select>
         <div *ngIf="isSubmitted && prodi.errors?.required" class="invalid-feedback">
           Pilih prodi anda
@@ -70,7 +70,7 @@
       <div class="form-group col-md-3">
         <select class="custom-select" formControlName="angkatan" (change)="gantiAngkatan($event)">
           <option value="" disabled>Angkatan...</option>
-          <option *ngFor="let angkatan of Angkatan" [ngValue]="angkatan">{{angkatan}}</option>
+          <option *ngFor="let angkatan of Angkatan" [value]="angkatan">{{angkatan}}</option>
         </select>
         <div *ngIf="isSubmitted && angkatan.errors?.required" class="invalid-feedback">
           Pilih angkatan anda
@@ -80,7 +80,7 @@
     <div class="form-group">
       <select class="custom-select" formControlName="divisi" (change)="gantiDivisi($event)">
         <option value="" disabled>Pilih Divisi</option>
-        <option *ngFor="let divisi of Divisi" [ngValue]="divisi">{{divisi}}</option>
+        <option *ngFor="let divisi of Divisi" [value]="divisi">{{divisi}}</option>
       </select>
       <div *ngIf="isSubmitted && divisi.errors?.required" class="invalid-feedback">
         Pilih divisi anda

@@ -10,11 +10,11 @@ import * as $ from "jquery";
 export class PenilaianKepribadianComponent implements OnInit {
   public questions;
   constructor(
-    private oprecapiService: OprecApiService,
+    private oprecApiService: OprecApiService,
   ) { }
 
   ngOnInit() {
-    this.questions = this.oprecapiService.getQuestion();
+    this.questions = this.oprecApiService.getBigFiveQ();
   }
 
   consoles(){
@@ -57,7 +57,7 @@ export class PenilaianKepribadianComponent implements OnInit {
     parseInt($('input[name="radio48"]:checked').val());
     console.log('C = ' + cScore);
 
-    let nscore = 38-
+    let nScore = 38-
     parseInt($('input[name="radio4"]:checked').val())+
     parseInt($('input[name="radio9"]:checked').val())-
     parseInt($('input[name="radio14"]:checked').val())+
@@ -68,9 +68,9 @@ export class PenilaianKepribadianComponent implements OnInit {
     parseInt($('input[name="radio39"]:checked').val())-
     parseInt($('input[name="radio44"]:checked').val())-
     parseInt($('input[name="radio49"]:checked').val());
-    console.log('N = ' + nscore);
+    console.log('N = ' + nScore);
 
-    let oscore = 8+
+    let oScore = 8+
     parseInt($('input[name="radio5"]:checked').val())-
     parseInt($('input[name="radio10"]:checked').val())+
     parseInt($('input[name="radio15"]:checked').val())-
@@ -81,6 +81,6 @@ export class PenilaianKepribadianComponent implements OnInit {
     parseInt($('input[name="radio40"]:checked').val())+
     parseInt($('input[name="radio45"]:checked').val())+
     parseInt($('input[name="radio50"]:checked').val());
-    console.log('O = ' + oscore);
+    console.log('O = ' + oScore);
   }
 }
