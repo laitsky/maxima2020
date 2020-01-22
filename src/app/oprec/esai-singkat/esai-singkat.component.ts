@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
+import {OprecApiService} from '../../_shared/services/oprec-api.service';
+import {PertanyaanDivisi} from '../../_shared/models/oprec/pertanyaan_divisi';
 
 @Component({
   selector: 'app-esai-singkat',
@@ -8,11 +9,22 @@ import {Router} from '@angular/router';
   styleUrls: ['./esai-singkat.component.css']
 })
 export class EsaiSingkatComponent implements OnInit {
-  constructor(private router: Router) {
+  public divQuestions: PertanyaanDivisi[];
+  division: any = sessionStorage.getItem('divisi');
+
+  constructor(private router: Router, private oprecApiService: OprecApiService) {
   }
 
   ngOnInit() {
-    console.log(sessionStorage.getItem('divisi'));
+    this.oprecApiService.getDivQueList().subscribe(result => {
+      this.divQuestions = result;
+      for (let i = 0; i < this.divQuestions.length; i++) {
+        if (this.divQuestions[i].Divisi == this.division) {
+          document.getElementById('selected-division').innerHTML = this.division;
+          document.getElementById('sd-question').innerHTML = this.divQuestions[i].Pertanyaan;
+        }
+      }
+    });
   }
 
 }
