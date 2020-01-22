@@ -13,3 +13,7 @@ label {
   resize: none;
   border: 1px solid grey;
 }
+
+#selected-division {
+  font-weight: bold;
+}
