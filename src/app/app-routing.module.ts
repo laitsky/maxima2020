@@ -4,6 +4,8 @@ import { OprecWelcomeComponent } from './oprec/oprec-welcome/oprec-welcome.compo
 import { FormOprecComponent } from './oprec/form-oprec/form-oprec.component';
 import { EsaiSingkatComponent } from './oprec/esai-singkat/esai-singkat.component';
 import { PenilaianKepribadianComponent } from './oprec/penilaian-kepribadian/penilaian-kepribadian.component';
+import { FinalisasiDataComponent } from './oprec/finalisasi-data/finalisasi-data.component';
+import { OprecTokenComponent } from './oprec/oprec-token/oprec-token.component';
 
 
 const routes: Routes = [
@@ -17,6 +19,10 @@ const routes: Routes = [
     component: OprecWelcomeComponent
   },
   {
+    path: 'oprec/penilaian-kepribadian',
+    component: PenilaianKepribadianComponent
+  },
+  {
     path: 'oprec/form-oprec',
     component: FormOprecComponent
   },
@@ -25,8 +31,12 @@ const routes: Routes = [
     component: EsaiSingkatComponent
   },
   {
-    path: 'oprec/penilaian-kepribadian',
-    component: PenilaianKepribadianComponent
+    path: 'oprec/finalisasi-data',
+    component: FinalisasiDataComponent
+  },
+  {
+    path: 'oprec/oprec-token',
+    component: OprecTokenComponent
   }
 ];
 
