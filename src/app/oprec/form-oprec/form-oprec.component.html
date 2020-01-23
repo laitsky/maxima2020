@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="form-row">
-      <div class="form-group col-md-8">
+      <div class="form-group col-md-3">
         <label for="tempat_lahir">Tempat Lahir</label>
         <input id="tempat_lahir" type="text" formControlName="tempat_lahir" class="form-control"
                [ngClass]="{ 'is-invalid': isSubmitted && fd.tempat_lahir.errors}">
@@ -21,7 +21,7 @@
           </div>
         </div>
       </div>
-      <div class="form-group col-md-4">
+      <div class="form-group col-md-2">
         <label for="tanggal_lahir">Tanggal Lahir</label>
         <input id="tanggal_lahir" type="date" formControlName="tanggal_lahir" class="form-control"
                [ngClass]="{ 'is-invalid': isSubmitted && fd.tanggal_lahir.errors}">
@@ -31,34 +31,51 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="form-group">
-      <label for="alamat">Alamat</label>
-      <input id="alamat" type="text" formControlName="alamat" class="form-control"
-             [ngClass]="{ 'is-invalid': isSubmitted && fd.alamat.errors}">
-      <div *ngIf="isSubmitted && fd.alamat.errors" class="invalid-feedback">
-        <div *ngIf="fd.alamat.errors.required">
-          Alamat harus diisi
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="nim">NIM</label>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text">000000</span>
-        </div>
-        <input id="nim" type="text" formControlName="nim" class="form-control"
-               [ngClass]="{ 'is-invalid': isSubmitted && fd.nim.errors}">
-        <div *ngIf="isSubmitted && fd.nim.errors" class="invalid-feedback">
-          <div *ngIf="fd.nim.errors.required">
-            NIM harus diisi
+      <div class="form-group col-md-7">
+        <label for="alamat">Alamat Tinggal</label>
+        <input id="alamat" type="text" formControlName="alamat" class="form-control"
+               [ngClass]="{ 'is-invalid': isSubmitted && fd.alamat.errors}">
+        <div *ngIf="isSubmitted && fd.alamat.errors" class="invalid-feedback">
+          <div *ngIf="fd.alamat.errors.required">
+            Alamat harus diisi
           </div>
         </div>
       </div>
     </div>
     <div class="form-row">
-      <div class="form-group col-md-9">
+      <div class="form-group col-md-6">
+        <label for="nim">NIM</label>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">000000</span>
+          </div>
+          <input id="nim" type="text" formControlName="nim" class="form-control"
+                 [ngClass]="{ 'is-invalid': isSubmitted && fd.nim.errors}">
+          <div *ngIf="isSubmitted && fd.nim.errors" class="invalid-feedback">
+            <div *ngIf="fd.nim.errors.required">
+              NIM harus diisi
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="email">Email Student</label>
+        <div class="input-group mb-3">
+          <input id="email" name="email" type="email" formControlName="email" class="form-control"
+                 [ngClass]="{ 'is-invalid': isSubmitted && fd.email.errors }">
+          <div class="input-group-append">
+            <span class="input-group-text">@student.umn.ac.id</span>
+          </div>
+          <div *ngIf="isSubmitted && fd.email.errors" class="invalid-feedback">
+            <div *ngIf="fd.email.errors.required">
+              Email harus diisi
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
         <select class="custom-select" formControlName="prodi" (change)="gantiProdi($event)">
           <option value="" disabled>Pilih Program Studi</option>
           <option *ngFor="let prodi of Prodi" [value]="prodi">{{prodi}}</option>
@@ -67,13 +84,23 @@
           Pilih prodi anda
         </div>
       </div>
-      <div class="form-group col-md-3">
+      <div class="form-group col-md-4">
         <select class="custom-select" formControlName="angkatan" (change)="gantiAngkatan($event)">
           <option value="" disabled>Angkatan...</option>
           <option *ngFor="let angkatan of Angkatan" [value]="angkatan">{{angkatan}}</option>
         </select>
         <div *ngIf="isSubmitted && angkatan.errors?.required" class="invalid-feedback">
           Pilih angkatan anda
+        </div>
+      </div>
+      <div class="form-group col-md-2">
+        <label style="display: none" for="ips_terakhir">IPS Terakhir</label>
+        <input id="ips_terakhir" type="text" formControlName="ips_terakhir" class="form-control"
+               [ngClass]="{ 'is-invalid': isSubmitted && fd.ips_terakhir.errors}" placeholder="IPS Terakhir">
+        <div *ngIf="isSubmitted && fd.ips_terakhir.errors" class="invalid-feedback">
+          <div *ngIf="fd.ips_terakhir.errors.required">
+            IPS terakhir harus diisi
+          </div>
         </div>
       </div>
     </div>
@@ -84,19 +111,6 @@
       </select>
       <div *ngIf="isSubmitted && divisi.errors?.required" class="invalid-feedback">
         Pilih divisi anda
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="email">Email Student</label>
-      <input id="email" type="email" formControlName="email" class="form-control"
-             [ngClass]="{ 'is-invalid': isSubmitted && fd.email.errors}">
-      <div *ngIf="isSubmitted && fd.email.errors" class="invalid-feedback">
-        <div *ngIf="fd.email.errors.required">
-          Email harus diisi
-        </div>
-        <div *ngIf="fd.email.errors.email">
-          Email harus valid
-        </div>
       </div>
     </div>
     <div class="form-row">
@@ -155,5 +169,4 @@
       <button class="btn btn-danger btn-block form-control" (click)="oprecForm.reset(); keepSelected()">Reset</button>
     </div>
   </form>
-
 </div>

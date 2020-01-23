@@ -39,7 +39,8 @@ export class FormOprecComponent implements OnInit {
     'Perlengkapan',
     'Public Relations - Publikasi',
     'Public Relations - Visual',
-    'Public Relations - Web'
+    'Public Relations - Web',
+    'Sponsor'
   ];
 
   constructor(private formBuilder: FormBuilder, private router: Router) {
@@ -54,8 +55,9 @@ export class FormOprecComponent implements OnInit {
       nim: ['', Validators.required],
       prodi: ['', Validators.required],
       angkatan: ['', Validators.required],
+      ips_terakhir: ['', Validators.required],
       divisi: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', Validators.required],
       nomorHP: ['', Validators.required],
       nomorWA: ['', Validators.required],
       uLine: ['', Validators.required],
@@ -76,6 +78,7 @@ export class FormOprecComponent implements OnInit {
       sessionStorage.setItem('nim', this.fd.nim.value);
       sessionStorage.setItem('prodi', this.fd.prodi.value);
       sessionStorage.setItem('angkatan', this.fd.angkatan.value);
+      sessionStorage.setItem('ips_terakhir', this.fd.ips_terakhir.value);
       sessionStorage.setItem('divisi', this.fd.divisi.value);
       sessionStorage.setItem('email', this.fd.email.value);
       sessionStorage.setItem('nomorHP', this.fd.nomorHP.value);
