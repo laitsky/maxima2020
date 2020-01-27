@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OprecApiService } from '../../_shared/services/oprec-api.service';
 import * as $ from "jquery";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-penilaian-kepribadian',
@@ -11,6 +12,7 @@ export class PenilaianKepribadianComponent implements OnInit {
   public questions;
   constructor(
     private oprecApiService: OprecApiService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -30,6 +32,7 @@ export class PenilaianKepribadianComponent implements OnInit {
     parseInt($('input[name="radio41"]:checked').val())-
     parseInt($('input[name="radio46"]:checked').val());
     console.log('E = ' + eScore);
+    sessionStorage.setItem('eScore', eScore.toString());
 
     let aScore = 14-
     parseInt($('input[name="radio2"]:checked').val())+
@@ -43,6 +46,7 @@ export class PenilaianKepribadianComponent implements OnInit {
     parseInt($('input[name="radio42"]:checked').val())+
     parseInt($('input[name="radio47"]:checked').val());
     console.log('A = ' + aScore);
+    sessionStorage.setItem('aScore', aScore.toString());
 
     let cScore = 14+
     parseInt($('input[name="radio3"]:checked').val())-
@@ -56,6 +60,7 @@ export class PenilaianKepribadianComponent implements OnInit {
     parseInt($('input[name="radio43"]:checked').val())+
     parseInt($('input[name="radio48"]:checked').val());
     console.log('C = ' + cScore);
+    sessionStorage.setItem('cScore', cScore.toString());
 
     let nScore = 38-
     parseInt($('input[name="radio4"]:checked').val())+
@@ -69,6 +74,7 @@ export class PenilaianKepribadianComponent implements OnInit {
     parseInt($('input[name="radio44"]:checked').val())-
     parseInt($('input[name="radio49"]:checked').val());
     console.log('N = ' + nScore);
+    sessionStorage.setItem('nScore', nScore.toString());
 
     let oScore = 8+
     parseInt($('input[name="radio5"]:checked').val())-
@@ -82,5 +88,8 @@ export class PenilaianKepribadianComponent implements OnInit {
     parseInt($('input[name="radio45"]:checked').val())+
     parseInt($('input[name="radio50"]:checked').val());
     console.log('O = ' + oScore);
+    sessionStorage.setItem('oScore', oScore.toString());
+
+    this.router.navigate(['oprec/form-oprec']);
   }
 }
