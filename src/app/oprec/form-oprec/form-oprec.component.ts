@@ -85,7 +85,7 @@ export class FormOprecComponent implements OnInit {
       sessionStorage.setItem('nomorWA', this.fd.nomorWA.value);
       sessionStorage.setItem('uLine', this.fd.uLine.value);
       sessionStorage.setItem('uInstagram', this.fd.uInstagram.value);
-      this.router.navigate(['/oprec/esai-singkat']);
+      this.router.navigate(['/oprec/finalisasi-data']);
     }
   }
 
