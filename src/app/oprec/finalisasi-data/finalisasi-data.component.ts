@@ -30,7 +30,17 @@ export class FinalisasiDataComponent implements OnInit {
       nomorHP: [{value: sessionStorage.getItem('nomorHP'), disabled: true}, Validators.required],
       nomorWA: [{value: sessionStorage.getItem('nomorWA'), disabled: true}, Validators.required],
       uLine: [{value: sessionStorage.getItem('uLine'), disabled: true}, Validators.required],
-      uInstagram: [{value: sessionStorage.getItem('uInstagram'), disabled: true}, Validators.required]
+      uInstagram: [{value: sessionStorage.getItem('uInstagram'), disabled: true}, Validators.required],
+
+      eScore: [{value: sessionStorage.getItem('eScore'), disabled: true}, Validators.required],
+      aScore: [{value: sessionStorage.getItem('aScore'), disabled: true}, Validators.required],
+      nScore: [{value: sessionStorage.getItem('nScore'), disabled: true}, Validators.required],
+      cScore: [{value: sessionStorage.getItem('cScore'), disabled: true}, Validators.required],
+      oScore: [{value: sessionStorage.getItem('oScore'), disabled: true}, Validators.required],
+
+      odyssey: [{value: sessionStorage.getItem('odyssey'), disabled: true}, Validators.required],
+      improvement_mxm: [{value: sessionStorage.getItem('improvement_mxm'), disabled: true}, Validators.required],
+      pertanyaan_divisi: [{value: sessionStorage.getItem('pertanyaan_divisi'), disabled: true}, Validators.required]
     });
 
   }

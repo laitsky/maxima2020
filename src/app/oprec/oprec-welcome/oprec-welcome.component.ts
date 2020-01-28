@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-oprec-welcome',
@@ -8,12 +8,14 @@ import {Router} from '@angular/router';
 })
 export class OprecWelcomeComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+   }
 
   ngOnInit() {
   }
 
-  goToBigFive(): void {
+  lanjut() {
     this.router.navigate(['oprec/penilaian-kepribadian']);
   }
+
 }
