@@ -47,6 +47,8 @@ export class FormOprecComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    location.reload();
+    
     this.oprecForm = this.formBuilder.group({
       nama_lengkap: [sessionStorage.getItem('nama_lengkap'), Validators.required],
       tempat_lahir: [sessionStorage.getItem('tempat_lahir'), Validators.required],
@@ -85,7 +87,7 @@ export class FormOprecComponent implements OnInit {
       sessionStorage.setItem('nomorWA', this.fd.nomorWA.value);
       sessionStorage.setItem('uLine', this.fd.uLine.value);
       sessionStorage.setItem('uInstagram', this.fd.uInstagram.value);
-      this.router.navigate(['/oprec/finalisasi-data']);
+      this.router.navigate(['/oprec/esai-singkat']);
     }
   }
 
