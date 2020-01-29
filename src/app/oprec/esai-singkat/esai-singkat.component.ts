@@ -46,7 +46,10 @@ export class EsaiSingkatComponent implements OnInit {
       sessionStorage.setItem('odyssey', (document.getElementById('odyssey') as HTMLTextAreaElement).value);
       sessionStorage.setItem('improvement_mxm', (document.getElementById('improvement_mxm') as HTMLTextAreaElement).value);
       sessionStorage.setItem('pertanyaan_divisi', (document.getElementById('pertanyaan_divisi') as HTMLTextAreaElement).value);
-      this.router.navigate(['oprec/finalisasi-data']);
+      this.router.navigate(['oprec/finalisasi-data'])
+        .then(() => {
+          window.location.reload();
+        });
     }
   }
 
