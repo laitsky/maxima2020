@@ -7,6 +7,7 @@ import {Router} from '@angular/router';
   templateUrl: './finalisasi-data.component.html',
   styleUrls: ['./finalisasi-data.component.css']
 })
+
 export class FinalisasiDataComponent implements OnInit {
   oprecForm: FormGroup;
 
@@ -40,7 +41,9 @@ export class FinalisasiDataComponent implements OnInit {
 
       odyssey: [{value: sessionStorage.getItem('odyssey'), disabled: true}, Validators.required],
       improvement_mxm: [{value: sessionStorage.getItem('improvement_mxm'), disabled: true}, Validators.required],
-      pertanyaan_divisi: [{value: sessionStorage.getItem('pertanyaan_divisi'), disabled: true}, Validators.required]
+      pertanyaan_divisi: [{value: sessionStorage.getItem('pertanyaan_divisi'), disabled: true}, Validators.required],
+
+      token_regis: [{value: sessionStorage.getItem('token'), disabled: true}, Validators.required]
     });
 
   }

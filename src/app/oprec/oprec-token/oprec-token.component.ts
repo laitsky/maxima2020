@@ -10,6 +10,7 @@ export class OprecTokenComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    document.getElementById('token').innerHTML =`${sessionStorage.getItem('token')}`;
   }
 
 }
