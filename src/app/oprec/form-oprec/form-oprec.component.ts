@@ -69,33 +69,7 @@ export class FormOprecComponent implements OnInit {
 
   /* cek token */
   // nilai token 2 huruf pertama nama divisi, 4 karakter no urut pendaftaran (lg dicari caranya), 2 angka selanjutnya random dari detik 
-  hitungtoken() {
-    var today = new Date();
-
-    let str_final = '';
-    //nama
-    let str_1 = sessionStorage.getItem('nama_lengkap');
-    str_final = str_final.concat(str_1.slice(0,2));
-    //nama divisi
-    let str_2 = sessionStorage.getItem('divisi');
-    str_final = str_final.concat(str_2.slice(-2));
-    //angka random
-    let angka_random = Math.round(Math.random() * 10);
-    str_final = str_final.concat(angka_random.toString());
-    //menit
-    let str_3 = today.getMinutes();
-    let angka_menit = '';
-    if (str_3 < 10)
-    {
-      angka_menit = "0" + str_3.toString();
-    }
-    else
-    {
-      angka_menit = str_3.toString();
-    }
-    str_final = str_final.concat(angka_menit);
-    sessionStorage.setItem('token', str_final);
-  }
+  
   /* menyimpan hasil submission form ke sessionStorage */
   oprecFormSave() {
     this.isSubmitted = true;
@@ -116,7 +90,7 @@ export class FormOprecComponent implements OnInit {
       sessionStorage.setItem('nomorWA', this.fd.nomorWA.value);
       sessionStorage.setItem('uLine', this.fd.uLine.value);
       sessionStorage.setItem('uInstagram', this.fd.uInstagram.value);
-      this.hitungtoken();
+      //this.hitungtoken();
       this.router.navigate(['/oprec/esai-singkat']);
     }
   }

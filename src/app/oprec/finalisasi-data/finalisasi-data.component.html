@@ -184,13 +184,13 @@
                     <textarea rows="3" cols="50" id="pertanyaan_divisi" name="pertanyaan_divisi" type="text" formControlName="pertanyaan_divisi" class="form-control"> </textarea>
                   </div>
               </div>
-              <div class="form-row">
-                <div class="form-group col-md-12" style="display:none;"> 
-                  <label for="token_regis"> Token </label>
-                  <!-- <input id="pertanyaan_divisi" name="pertanyaan_divisi" type="text" formControlName="pertanyaan_divisi" class="form-control"> -->
-                  <textarea rows="1" cols="50" id="token_regis" name="token_regis" type="text" formControlName="token_regis" class="form-control"> </textarea>
-                </div>
-            </div>
+              <div class="form-row" id="buat_token">
+                  <div class="form-group col-md-12" style="display:none;"> 
+                      <label for="token_regis"> Token </label>
+                      <!-- <input id="pertanyaan_divisi" name="pertanyaan_divisi" type="text" formControlName="pertanyaan_divisi" class="form-control"> -->
+                      <textarea rows="1" cols="50" id="token_regis" value="${sessionStorage.getItem('token')}" name="token_regis" type="text" formControlName="token_regis" class="form-control"> </textarea>
+                  </div>
+              </div>
           </div>
         </div>
       </div>
