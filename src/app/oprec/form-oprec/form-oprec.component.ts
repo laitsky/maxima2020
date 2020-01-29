@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import swal from 'sweetalert2';
+import { stringify } from 'querystring';
 
 @Component({
   selector: 'app-form-oprec',
@@ -48,7 +49,6 @@ export class FormOprecComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
     this.oprecForm = this.formBuilder.group({
       nama_lengkap: [sessionStorage.getItem('nama_lengkap'), Validators.required],
       tempat_lahir: [sessionStorage.getItem('tempat_lahir'), Validators.required],
@@ -67,6 +67,9 @@ export class FormOprecComponent implements OnInit {
     });
   }
 
+  /* cek token */
+  // nilai token 2 huruf pertama nama divisi, 4 karakter no urut pendaftaran (lg dicari caranya), 2 angka selanjutnya random dari detik 
+  
   /* menyimpan hasil submission form ke sessionStorage */
   oprecFormSave() {
     this.isSubmitted = true;
@@ -87,6 +90,7 @@ export class FormOprecComponent implements OnInit {
       sessionStorage.setItem('nomorWA', '0' + this.fd.nomorWA.value.toString());
       sessionStorage.setItem('uLine', this.fd.uLine.value);
       sessionStorage.setItem('uInstagram', this.fd.uInstagram.value);
+      //this.hitungtoken();
       this.router.navigate(['/oprec/esai-singkat']);
     }
   }
