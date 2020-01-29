@@ -1,40 +1,44 @@
-<div class="container">
-  <form [formGroup]="esaiForm" (ngSubmit)="esaiFormSave()">
-    <div id="textarea-container">
-      <div class="form-group">
-        <label for="odyssey">Bagaimana kamu mendefinisikan <strong>odyssey</strong> sebagai tema MAXIMA 2020?</label>
-        <textarea id="odyssey" class="text-input form-control" rows="7" cols="50" formControlName="odyssey"
-                  [ngClass]="{ 'is-invalid': isSubmitted && fd.odyssey.errors}"></textarea>
-        <div *ngIf="isSubmitted && fd.odyssey.errors" class="invalid-feedback">
-          <div *ngIf="fd.odyssey.errors.required">
-            Pertanyaan ini harus dijawab
+<div id="base-layer" class="container-fluid py-3">
+  <div id="esai-container" class="container  pb-3 rounded">
+    <form [formGroup]="esaiForm" (ngSubmit)="esaiFormSave()">
+      <div id="textarea-container">
+        <div class="form-group">
+          <label for="odyssey">Bagaimana kamu mendefinisikan <strong>odyssey</strong> sebagai tema MAXIMA 2020?</label>
+          <textarea id="odyssey" class="text-input form-control" rows="7" cols="50" formControlName="odyssey"
+                    [ngClass]="{ 'is-invalid': isSubmitted && fd.odyssey.errors}"></textarea>
+          <div *ngIf="isSubmitted && fd.odyssey.errors" class="invalid-feedback">
+            <div *ngIf="fd.odyssey.errors.required">
+              Pertanyaan ini harus dijawab
+            </div>
           </div>
         </div>
-      </div>
-      <div class="form-group">
-        <label for="improvement_mxm">Apa yang akan kamu tingkatkan pada MAXIMA 2020?</label>
-        <textarea id="improvement_mxm" class="text-input form-control" rows="7" cols="50" formControlName="improvement_mxm"
-                  [ngClass]="{ 'is-invalid': isSubmitted && fd.improvement_mxm.errors}"></textarea>
-        <div *ngIf="isSubmitted && fd.improvement_mxm.errors" class="invalid-feedback">
-          <div *ngIf="fd.improvement_mxm.errors.required">
-            Pertanyaan ini harus dijawab
+        <div class="form-group">
+          <label for="improvement_mxm">Apa yang akan kamu tingkatkan pada MAXIMA 2020?</label>
+          <textarea id="improvement_mxm" class="text-input form-control" rows="7" cols="50"
+                    formControlName="improvement_mxm"
+                    [ngClass]="{ 'is-invalid': isSubmitted && fd.improvement_mxm.errors}"></textarea>
+          <div *ngIf="isSubmitted && fd.improvement_mxm.errors" class="invalid-feedback">
+            <div *ngIf="fd.improvement_mxm.errors.required">
+              Pertanyaan ini harus dijawab
+            </div>
           </div>
         </div>
-      </div>
-      <div class="form-group">
-        <label for="pertanyaan_divisi">Pertanyaan Divisi <span id="selected-division"></span> </label>
-        <p id="sd-question"></p>
-        <textarea id="pertanyaan_divisi" class="text-input form-control" rows="7" cols="50" formControlName="pertanyaan_divisi"
-                  [ngClass]="{ 'is-invalid': isSubmitted && fd.pertanyaan_divisi.errors}"></textarea>
-        <div *ngIf="isSubmitted && fd.pertanyaan_divisi.errors" class="invalid-feedback">
-          <div *ngIf="fd.pertanyaan_divisi.errors.required">
-            Pertanyaan divisi harus dijawab
+        <div class="form-group">
+          <label for="pertanyaan_divisi">Pertanyaan Divisi <span id="selected-division"></span> </label>
+          <p id="sd-question"></p>
+          <textarea id="pertanyaan_divisi" class="text-input form-control" rows="7" cols="50"
+                    formControlName="pertanyaan_divisi"
+                    [ngClass]="{ 'is-invalid': isSubmitted && fd.pertanyaan_divisi.errors}"></textarea>
+          <div *ngIf="isSubmitted && fd.pertanyaan_divisi.errors" class="invalid-feedback">
+            <div *ngIf="fd.pertanyaan_divisi.errors.required">
+              Pertanyaan divisi harus dijawab
+            </div>
           </div>
         </div>
+        <div class="form-group">
+          <button class="btn btn-primary btn-block">Kirim Esai</button>
+        </div>
       </div>
-      <div class="form-group">
-        <button class="btn btn-primary btn-block">Kirim Esai</button>
-      </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </div>

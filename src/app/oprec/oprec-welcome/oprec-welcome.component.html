@@ -1,9 +1,13 @@
+<body>
 <div class="container">
-  <div id="mxm20-logo" class="container-fluid">
-    <img src="assets/mxm20_logo.png" class="img-fluid" alt="Logo MAXIMA 2020">
+  <div id="mxm20-container" class="container-fluid">
     <div class="text-center">
-      <button class="mxm-button" (click)="goToBigFive()">Mulai</button>
+      <div id="welcome-text">Siapkah kamu menjadi bagian dari MAXIMA 2020?</div>
+      <img id="mxm20-logo" src="assets/mxm20_logo.png" class="img-fluid filter-bnw" alt="Logo MAXIMA 2020">
+      <button id="start-button" class="press press-red press-pill press-ghost press-lg" (click)="lanjut()"><i
+        class="las la-hand-point-up"></i><div id="start-btn-text"></div>
+      </button>
     </div>
   </div>
-  <button type="button" (click)="lanjut()"> Siap! </button>
 </div>
+</body>

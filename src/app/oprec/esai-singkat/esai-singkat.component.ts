@@ -3,7 +3,7 @@ import {Router} from '@angular/router';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 import {OprecApiService} from '../../_shared/services/oprec-api.service';
 import {PertanyaanDivisi} from '../../_shared/models/oprec/pertanyaan_divisi';
-
+import swal from 'sweetalert2';
 @Component({
   selector: 'app-esai-singkat',
   templateUrl: './esai-singkat.component.html',
@@ -29,6 +29,7 @@ export class EsaiSingkatComponent implements OnInit {
 
     this.oprecApiService.getDivQueList().subscribe(result => {
       this.divQuestions = result;
+      // tslint:disable-next-line:prefer-for-of
       for (let i = 0; i < this.divQuestions.length; i++) {
         if (this.divQuestions[i].Divisi == this.division) {
           document.getElementById('selected-division').innerHTML = this.division;
@@ -41,7 +42,7 @@ export class EsaiSingkatComponent implements OnInit {
   esaiFormSave(): any {
     this.isSubmitted = true;
     if (!this.esaiForm.valid) {
-      window.alert('Isi semua esai kamu!');
+      swal.fire('Isi semua esai kamu!');
     } else {
       sessionStorage.setItem('odyssey', (document.getElementById('odyssey') as HTMLTextAreaElement).value);
       sessionStorage.setItem('improvement_mxm', (document.getElementById('improvement_mxm') as HTMLTextAreaElement).value);

@@ -6,6 +6,7 @@ import { EsaiSingkatComponent } from './oprec/esai-singkat/esai-singkat.componen
 import { PenilaianKepribadianComponent } from './oprec/penilaian-kepribadian/penilaian-kepribadian.component';
 import { FinalisasiDataComponent } from './oprec/finalisasi-data/finalisasi-data.component';
 import { OprecTokenComponent } from './oprec/oprec-token/oprec-token.component';
+import {SaranDivisiComponent} from './oprec/saran-divisi/saran-divisi.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'oprec/penilaian-kepribadian',
     component: PenilaianKepribadianComponent
+  },
+  {
+    path: 'oprec/saran-divisi',
+    component: SaranDivisiComponent
   },
   {
     path: 'oprec/form-oprec',

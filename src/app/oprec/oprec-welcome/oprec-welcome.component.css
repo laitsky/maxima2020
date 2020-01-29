@@ -1,5 +1,39 @@
+body {
+  background-color: black;
+  height: 100vh;
+}
+
+#start-button {
+  font-family: 'Source Code Pro', sans-serif;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+#start-button:hover {
+  box-shadow: 0px 0px 5px #fff;
+}
+
+.transitionOnHover {
+  transition: 0.5s all ease-in-out;
+}
+
+.filter-bnw {
+  filter: grayscale(100%);
+  transition: 0.3s all ease-in-out;
+}
+#welcome-text {
+  padding-top: 1.5vh;
+  font-family: "Source Code Pro", sans-serif;
+  font-size: 1.35em;
+  color: white;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 @media (min-width: 320px) {
   /* smartphones, iPhone, portrait 480x320 phones */
+
 }
 
 @media (min-width: 481px) {
@@ -8,6 +42,7 @@
 
 @media (min-width: 641px) {
   /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+
 }
 
 @media (min-width: 961px) {
@@ -16,8 +51,8 @@
 
 @media (min-width: 1025px) {
   /* big landscape tablets, laptops, and desktops */
-  #mxm20-logo {
-    width: 45%;
+  #mxm20-container {
+    width: 52%;
   }
 }
 
