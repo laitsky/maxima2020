@@ -7,6 +7,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 import { LoadingBarModule } from '@ngx-loading-bar/core';
+import { SweetAlert2Module} from '@sweetalert2/ngx-sweetalert2';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OprecWelcomeComponent } from './oprec/oprec-welcome/oprec-welcome.component';
@@ -37,7 +39,8 @@ import { OprecTokenComponent } from './oprec/oprec-token/oprec-token.component';
     ReactiveFormsModule,
     LoadingBarHttpClientModule,
     LoadingBarRouterModule,
-    LoadingBarModule
+    LoadingBarModule,
+    SweetAlert2Module.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

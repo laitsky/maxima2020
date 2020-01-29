@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
-
 @Component({
   selector: 'app-finalisasi-data',
   templateUrl: './finalisasi-data.component.html',
@@ -47,6 +46,7 @@ export class FinalisasiDataComponent implements OnInit {
 
   prosedurMaju() {
     this.router.navigate(['oprec/oprec-token']);
+    sessionStorage.clear();
   }
 
 }

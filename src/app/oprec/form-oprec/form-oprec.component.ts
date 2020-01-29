@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-form-oprec',
@@ -70,7 +71,7 @@ export class FormOprecComponent implements OnInit {
   oprecFormSave() {
     this.isSubmitted = true;
     if (!this.oprecForm.valid) {
-      window.alert('Lengkapi data kamu!');
+      swal.fire('Lengkapi data kamu!');
     } else {
       sessionStorage.setItem('nama_lengkap', this.fd.nama_lengkap.value);
       sessionStorage.setItem('tempat_lahir', this.fd.tempat_lahir.value);

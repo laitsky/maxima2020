@@ -1,2 +1,4 @@
-<ngx-loading-bar></ngx-loading-bar>
-<router-outlet></router-outlet>
+<ngx-loading-bar [height]="'0.25em'" [includeSpinner]="false"></ngx-loading-bar>
+<div [@myAnimation]="o.isActivated ? o.activatedRoute : ''">
+  <router-outlet #o="outlet"></router-outlet>
+</div>
