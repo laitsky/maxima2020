@@ -50,20 +50,20 @@ export class FormOprecComponent implements OnInit {
 
   ngOnInit(): void {
     this.oprecForm = this.formBuilder.group({
-      nama_lengkap: [sessionStorage.getItem('nama_lengkap'), Validators.required],
-      tempat_lahir: [sessionStorage.getItem('tempat_lahir'), Validators.required],
-      tanggal_lahir: [sessionStorage.getItem('tanggal_lahir'), Validators.required],
-      alamat: [sessionStorage.getItem('alamat'), Validators.required],
-      nim: [sessionStorage.getItem('nim'), Validators.required],
-      prodi: [sessionStorage.getItem('prodi'), Validators.required],
-      angkatan: [sessionStorage.getItem('angkatan'), Validators.required],
-      ips_terakhir: [sessionStorage.getItem('ips_terakhir'), Validators.required],
-      divisi: [sessionStorage.getItem('divisi'), Validators.required],
-      email: [sessionStorage.getItem('email'), Validators.required],
-      nomorHP: [sessionStorage.getItem('nomorHP'), Validators.required],
-      nomorWA: [sessionStorage.getItem('nomorWA'), Validators.required],
-      uLine: [sessionStorage.getItem('uLine'), Validators.required],
-      uInstagram: [sessionStorage.getItem('uInstagram'), Validators.required]
+      nama_lengkap: ['', Validators.required],
+      tempat_lahir: ['', Validators.required],
+      tanggal_lahir: ['', Validators.required],
+      alamat: ['', Validators.required],
+      nim: ['', Validators.required],
+      prodi: ['', Validators.required],
+      angkatan: ['', Validators.required],
+      ips_terakhir: ['', Validators.required],
+      divisi: ['', Validators.required],
+      email: ['', Validators.required],
+      nomorHP: ['', Validators.required],
+      nomorWA: ['', Validators.required],
+      uLine: ['', Validators.required],
+      uInstagram: ['', Validators.required]
     });
   }
 
