@@ -78,11 +78,10 @@ export class FinalisasiDataComponent implements OnInit {
     sessionStorage.setItem('token', str_final);
   }
 
-  
+
 
   prosedurMaju() {
     this.router.navigate(['oprec/oprec-token']);
-    sessionStorage.clear();
   }
 
 }

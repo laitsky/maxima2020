@@ -11,6 +11,7 @@ export class OprecTokenComponent implements OnInit {
 
   ngOnInit() {
     particlesJS.load("particles-js", "assets/token_particles.json", null);
+    //sessionStorage.clear();
   }
 
 }
