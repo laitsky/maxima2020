@@ -1,25 +1,37 @@
 <table class="table table-hover">
     <thead class="thead-dark">
-        <tr>
-            <th>Number</th>
-            <th>Questions</th>
-            <th>Scale</th>
-        </tr>
+        <th><h1 style="text-align: center;">TES KEPRIBADIAN</h1></th>
     </thead>
-    <tbody >
-        <tr *ngFor="let question of questions | async; let i = index">
-            <td>{{ i+1 }}</td>
-            <td>{{ question.pertanyaan }}</td>
-            
-            <input type="radio" value="1" name="radio{{i+1}}"/>
-            <input type="radio" value="2" name="radio{{i+1}}"/>
-            <input type="radio" value="3" name="radio{{i+1}}"/>
-            <input type="radio" value="4" name="radio{{i+1}}"/>
-            <input type="radio" value="5" name="radio{{i+1}}"/>     
-            
-        </tr>
-        <input type="submit" value="Submit" (click)="consoles()">
-    </tbody>
 </table>
+<div *ngFor="let question of questions | async; let i = index" style="padding: 10px;" class="center">
+    <p class="textsoal">{{ i+1 }}. "{{ question.pertanyaan }}"</p>
+    <a class="initext">Sangat Tidak Setuju </a>
+    <div class="radiv"> 
+        <div style="float: left;padding-top: 3px;">
+            <input type="radio" class="radio" value="1" name="radio{{i+1}}" required>
+        </div>
+        <div style="float: left;padding-left: 25px;padding-top: 8px;">
+            <input type="radio" class="radio1" value="2" name="radio{{i+1}}">
+        </div>
+        <div style="float: left;padding-left: 25px;padding-top: 10px;">
+            <input type="radio" class="radio2" value="3" name="radio{{i+1}}">
+        </div>
+        <div style="float: left;padding-left: 25px;padding-top: 8px;">
+            <input type="radio" class="radio3" value="4" name="radio{{i+1}}">
+        </div>
+        <div style="float: left;padding-left: 25px;padding-right: 25px;padding-top: 3px;">
+            <input type="radio" class="radio4" value="5" name="radio{{i+1}}">
+        </div>  
+    </div>
+    <a class="initext_1">Sangat Setuju</a>
+    <br>
+    <br>
+</div>
+<div class="centers">
+    <input type="submit" value="Submit" (click)="consoles()" class="submit">
+</div>
+
+<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Do Hyeon' rel='stylesheet'>
 
 
