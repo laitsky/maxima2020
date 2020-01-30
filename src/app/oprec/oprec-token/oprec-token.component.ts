@@ -6,7 +6,7 @@ declare var particlesJS: any;
   styleUrls: ['./oprec-token.component.css']
 })
 export class OprecTokenComponent implements OnInit {
-  oprecToken: string;
+  oprecToken: string = sessionStorage.getItem('token');
   constructor() { }
 
   ngOnInit() {

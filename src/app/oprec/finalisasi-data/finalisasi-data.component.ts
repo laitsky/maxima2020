@@ -1,11 +1,14 @@
 import {Component, OnInit} from '@angular/core';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
+
+import { format } from 'url';
 @Component({
   selector: 'app-finalisasi-data',
   templateUrl: './finalisasi-data.component.html',
   styleUrls: ['./finalisasi-data.component.css']
 })
+
 export class FinalisasiDataComponent implements OnInit {
   oprecForm: FormGroup;
 
@@ -14,7 +17,8 @@ export class FinalisasiDataComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(sessionStorage.getItem('odyssey'));
+    this.hitungtoken();
+
     this.oprecForm = this.formBuilder.group({
       nama_lengkap: [{value: sessionStorage.getItem('nama_lengkap'), disabled: true}, Validators.required],
       tempat_lahir: [{value: sessionStorage.getItem('tempat_lahir'), disabled: true}, Validators.required],
@@ -39,10 +43,42 @@ export class FinalisasiDataComponent implements OnInit {
 
       odyssey: [{value: sessionStorage.getItem('odyssey'), disabled: true}, Validators.required],
       improvement_mxm: [{value: sessionStorage.getItem('improvement_mxm'), disabled: true}, Validators.required],
-      pertanyaan_divisi: [{value: sessionStorage.getItem('pertanyaan_divisi'), disabled: true}, Validators.required]
+      pertanyaan_divisi: [{value: sessionStorage.getItem('pertanyaan_divisi'), disabled: true}, Validators.required],
+
+      token_regis: [{value: sessionStorage.getItem('token'), disabled: true}, Validators.required]
     });
 
   }
+
+  hitungtoken(): void {
+    var today = new Date();
+
+    let str_final = '';
+    //nama
+    let str_1 = sessionStorage.getItem('nama_lengkap');
+    str_final = str_final.concat(str_1.slice(0,2));
+    //nama divisi
+    let str_2 = sessionStorage.getItem('divisi');
+    str_final = str_final.concat(str_2.slice(-2));
+    //angka random
+    let angka_random = Math.floor(Math.random() * 10);
+    str_final = str_final.concat(angka_random.toString());
+    //menit
+    let str_3 = today.getMinutes();
+    let angka_menit = '';
+    if (str_3 < 10)
+    {
+      angka_menit = "0" + str_3.toString();
+    }
+    else
+    {
+      angka_menit = str_3.toString();
+    }
+    str_final = str_final.concat(angka_menit);
+    sessionStorage.setItem('token', str_final);
+  }
+
+  
 
   prosedurMaju() {
     this.router.navigate(['oprec/oprec-token']);

@@ -13,7 +13,7 @@
           </button>
         </h2>
       </div>
-      <div id="collapseOne" class="collapse card-body" aria-labelledby="headingOne" data-parent="#accordionForm">
+      <div id="collapseOne" class="collapse show card-body" aria-labelledby="headingOne" data-parent="#accordionForm">
         <div class="form-group">
           <label for="nama_lengkap">Nama Lengkap</label>
             <input id="nama_lengkap" name="nama_lengkap" type="text" formControlName="nama_lengkap" class="form-control">
@@ -164,6 +164,7 @@
           <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionForm">
             <div class="card-body">
               <div class="form-row">
+
                   <div class="form-group col-md-12">
                     <label for="odyssey"> Bagaimana kamu mendefinisikan <strong>odyssey</strong> sebagai tema MAXIMA 2020?</label>
                     <input id="odyssey" name="odyssey" type="text" formControlName="odyssey" class="form-control">
@@ -173,12 +174,21 @@
                 <div class="form-group col-md-12">
                   <label for="improvement_mxm"> Apa yang akan kamu tingkatkan pada MAXIMA 2020? </label>
                   <input id="improvement_mxm" name="improvement_mxm" type="text" formControlName="improvement_mxm" class="form-control">
+
                 </div>
               </div>
               <div class="form-row">
                   <div class="form-group col-md-12">
                     <label for="pertanyaan_divisi"> Pertanyaan Divisi </label>
-                    <input id="pertanyaan_divisi" name="pertanyaan_divisi" type="text" formControlName="pertanyaan_divisi" class="form-control">
+                    <!-- <input id="pertanyaan_divisi" name="pertanyaan_divisi" type="text" formControlName="pertanyaan_divisi" class="form-control"> -->
+                    <textarea rows="3" cols="50" id="pertanyaan_divisi" name="pertanyaan_divisi" type="text" formControlName="pertanyaan_divisi" class="form-control"> </textarea>
+                  </div>
+              </div>
+              <div class="form-row" id="buat_token">
+                  <div class="form-group col-md-12" style="display:none;"> 
+                      <label for="token_regis"> Token </label>
+                      <!-- <input id="pertanyaan_divisi" name="pertanyaan_divisi" type="text" formControlName="pertanyaan_divisi" class="form-control"> -->
+                      <textarea rows="1" cols="50" id="token_regis" value="${sessionStorage.getItem('token')}" name="token_regis" type="text" formControlName="token_regis" class="form-control"> </textarea>
                   </div>
               </div>
           </div>
