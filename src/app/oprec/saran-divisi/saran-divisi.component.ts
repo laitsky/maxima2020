@@ -17,6 +17,11 @@ export class SaranDivisiComponent implements OnInit {
   }
 
   ngOnInit() {
+    document.getElementById('aScore').innerHTML = `Agreeableness: <b> ${sessionStorage.getItem('aScore')} </b>`;
+    document.getElementById('cScore').innerHTML = `Conscientious: <b> ${sessionStorage.getItem('cScore')}</b>`;
+    document.getElementById('eScore').innerHTML = `Extraversion: <b> ${sessionStorage.getItem('eScore')}</b>`;
+    document.getElementById('nScore').innerHTML = `Neuroticism: <b> ${sessionStorage.getItem('nScore')}</b>`;
+    document.getElementById('oScore').innerHTML = `Openness: <b> ${sessionStorage.getItem('oScore')}</b>`;
   }
 
   nextCmp(): void {
