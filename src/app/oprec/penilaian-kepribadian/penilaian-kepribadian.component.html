@@ -1,13 +1,13 @@
 <div id="base-layer" class="container-fluid py-3">
-<div class="head"><img src="assets/img/1.png" width="25%"></div>
+<div id="head"><h1>Penilaian<br>Kepribadian</h1></div>
 <div id="esai-container" class="container  pb-3 rounded">
-    
+
     <table class="table table-hover">
 </table>
-<div *ngFor="let question of questions | async; let i = index" style="padding: 10px;" class="center">
+<div *ngFor="let question of questions | async; let i = index" style="padding: 10px; font-family: canaro-medium" class="center">
     <p class="textsoal"><b><h5>{{ question.pertanyaan }}</h5></b></p>
     <a class="initext"><h6>Sangat Tidak Setuju</h6> </a>
-    <div class="radiv"> 
+    <div class="radiv">
         <div style="float: left;padding-top: 8px;">
             <input type="radio" class="radio1" value="1" name="radio{{i+1}}" required>
         </div>
@@ -22,14 +22,14 @@
         </div>
         <div style="float: left;padding-left: 25px;padding-right: 25px;padding-top: 8px;">
             <input type="radio" class="radio1" value="5" name="radio{{i+1}}">
-        </div>  
+        </div>
     </div>
     <a class="initext_1"><h6>Sangat Setuju</h6></a>
     <br>
     <br>
 </div>
 <div class="centers">
-    <input type="submit" value="Submit" (click)="consoles()" class="submit">
+    <input type="submit" value="Submit" (click)="consoles()" class="press press-ghost press-pill press-pink press-lg">
 </div>
 </div>
 </div>

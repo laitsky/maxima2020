@@ -24,7 +24,4 @@ export class SaranDivisiComponent implements OnInit {
     document.getElementById('oScore').innerHTML = `Openness: <b> ${sessionStorage.getItem('oScore')}</b>`;
   }
 
-  nextCmp(): void {
-    this.router.navigate(['/oprec/form-oprec']);
-  }
 }

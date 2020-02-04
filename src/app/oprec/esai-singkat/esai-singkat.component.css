@@ -2,9 +2,12 @@ label {
   padding-top: 3vh;
   padding-bottom: 1.5vh;
 }
-
-#textarea-container {
-  padding: 2em;
+#head {
+  font-family: canaro-bold;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bolder;
+  margin-left: 15%;
 }
 
 .text-input {
@@ -21,24 +24,15 @@ label {
 
 #base-layer {
   background-image: url(https://i.imgur.com/nQPCt4x.png);
-  height: 100vh;
-    /* Full height */
     height: 100%;
-    padding-left: 11%;
-    padding-right: 11%;
-
-    /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
 #esai-container {
-  margin-top: 2%;
-  margin-bottom: 3%;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 5%;
+  max-width: 960px;
+  font-family: canaro-medium;
   background-color: white;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
   0 2px 4px rgba(0, 0, 0, 0.07),
@@ -66,47 +60,14 @@ label {
 
 @media (min-width: 961px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
-  #esai-container {
-    padding-left: 3%;
-    padding-right: 3%;
-  }
+
 }
 
 @media (min-width: 1025px) {
   /* big landscape tablets, laptops, and desktops */
-  #base-layer {
-    padding-left: 25%;
-    padding-right: 25%;
-  }
-
 }
 
 @media (min-width: 1281px) {
   /* hi-res laptops and desktops */
 
-}
-
-.submit{
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  margin-top: 30px;
-  margin-left: 40%;
-  margin-right: 50%;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  cursor: pointer;
-  background-color: white; 
-  color: black; 
-  border: 2px solid #F14959;
-  border-radius: 20px;
-}
-
-.submit:hover {
-  background-color: #F14959;
-  color: white;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }

@@ -5,7 +5,20 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
-
+@font-face {
+  font-family: "canaro-bold";
+  src: url("assets/fonts/canaro_bold/CanaroW00-Bold.eot");
+  src: url("assets/fonts/canaro_bold/CanaroW00-Bold.woff") format("woff"),
+  url("assets/fonts/canaro_bold/CanaroW00-Bold.ttf") format("truetype"),
+  url("assets/fonts/canaro_bold/CanaroW00-Bold.svg") format("svg");
+}
+@font-face {
+  font-family: "canaro-medium";
+  src: url("assets/fonts/canaro_medium/CanaroW00-Medium.eot");
+  src: url("assets/fonts/canaro_medium/CanaroW00-Medium.woff") format("woff"),
+  url("assets/fonts/canaro_medium/CanaroW00-Medium.ttf") format("truetype"),
+  url("assets/fonts/canaro_medium/CanaroW00-Medium.svg") format("svg");
+}
 
 /* media query placeholder (copy media query dibawah ini untuk memberikan tampilan yang responsif */
 @media (min-width: 320px) {
