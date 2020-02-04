@@ -62,6 +62,23 @@
   border-radius: 50%;
 }
 
+
+
+.center{
+    /* max-width: 600px; */
+    margin: auto;
+}
+
+.centerkhusus {
+    margin: auto;
+    width: 25%;
+}
+
+.centers{
+    max-width: 120px;
+    margin: auto;
+    padding: 15px;
+
 .radio1:hover {
   background-color: #1F2C4C;
 }
@@ -69,20 +86,8 @@
 .radio1:checked {
   border: 2px solid white;
   background: #F4224B;
+
 }
-
-
-.center {
-  max-width: 600px;
-  margin: auto;
-}
-
-.centers {
-  max-width: 120px;
-  margin: auto;
-  padding: 15px;
-}
-
 
 .initext {
   float: left;
@@ -97,10 +102,17 @@
   font-size: 20px;
 }
 
-.textsoal {
-  text-align: center;
-  font-size: 31px;
+
+.initext_2{
+    float:right;
+    padding-top: 10px;
+    font-size: 20px;
 }
+
+.textsoal{
+    text-align: center;
+    font-size: 31px;
+
 
 .radiv {
   width: 100%;
