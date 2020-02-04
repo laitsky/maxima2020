@@ -1,13 +1,34 @@
 <body>
-<div class="container">
-  <div id="mxm20-container" class="container-fluid">
-    <div class="text-center">
-      <div id="welcome-text">Siapkah kamu menjadi bagian dari MAXIMA 2020?</div>
-      <img id="mxm20-logo" src="assets/mxm20_logo.png" class="img-fluid filter-bnw" alt="Logo MAXIMA 2020">
-      <button id="start-button" class="press press-red press-pill press-ghost press-lg" (click)="lanjut()"><i
-        class="las la-hand-point-up"></i><div id="start-btn-text"></div>
-      </button>
-    </div>
-  </div>
+
+  <!-- The video -->
+<video autoplay muted loop id="myVideo">
+  <source src="assets/rain.mp4" type="video/mp4">
+</video>
+
+<!-- Optional: some overlay text to describe the video -->
+<div class="content">
+  <div class="overlay">
+  <div class="text-center">
+    <img id="mxm20-logo" src="assets/mxm20_logo.png" alt="Logo MAXIMA 2020">
+    <br>
+    <button id="start-button" class="press press-red press-pill press-ghost press-lg" (click)="lanjut()"><i
+      class="las la-hand-point-up"></i><div id="start-btn-text"></div>
+    </button>
 </div>
+</div>
+</div>
+
+  <div class="parallax">
+   
+  </div>
 </body>
+
+<script>
+  // Get the video
+  var video = document.getElementById("myVideo");
+  
+  // Get the button
+  var btn = document.getElementById("myBtn");
+  
+
+  </script>

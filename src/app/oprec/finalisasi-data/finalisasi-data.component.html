@@ -1,6 +1,8 @@
-<div class="container">
+<div id="base-layer" class="container-fluid py-3">
+
   <h3> Silahkan periksa kembali data yang anda isikan </h3>
-  <br> <br>
+  <div id="esai-container" class="container  pb-3 rounded">
+    
   <form [formGroup]="oprecForm" method="POST" data-email="lumiere03.testing@gmail.com" class="gform"
         action="https://script.google.com/macros/s/AKfycbzSsXLGHxZ5wm9WSmpuQg5naURXcD5b8qFHztjS/exec"
         (ngSubmit)="prosedurMaju()">
@@ -198,8 +200,9 @@
     </div> <!-- end of accordion div -->
 
     <div>
-      <button class="btn btn-primary btn-block form-control"> Submit Data</button>
+      <button class="btn btn-primary btn-block form-control" class="submit"> Submit Data</button>
     </div>
 
   </form>
+</div>
 </div>
