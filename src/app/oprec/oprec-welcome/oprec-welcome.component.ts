@@ -24,8 +24,4 @@ export class OprecWelcomeComponent implements OnInit {
 
   }
 
-  lanjut() {
-    this.router.navigate(['oprec/penilaian-kepribadian']);
-  }
-
 }
