@@ -8,6 +8,14 @@ body, html {
   box-sizing: border-box;
 }
 
+div.transbox {
+  margin: auto;
+  background-color: #F4224B;
+  border-radius: 10px;
+  opacity: 0.6;
+  position: relative;
+}
+
 #start-button {
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 2.5px;
@@ -87,7 +95,9 @@ body, html {
 
 @media (min-width: 320px) {
   /* smartphones, iPhone, portrait 480x320 phones */
-
+  #status_regis {
+    width: 80%;
+  }
 }
 
 @media (min-width: 481px) {
@@ -96,11 +106,20 @@ body, html {
 
 @media (min-width: 641px) {
   /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  
+}
 
+@media (min-width: 768px) {
+  #status_regis {
+    width: 30%;
+  }
 }
 
 @media (min-width: 961px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
+  #status_regis {
+    width: 19%;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -108,6 +127,7 @@ body, html {
   #mxm20-container {
     width: 52%;
   }
+  
 }
 
 @media (min-width: 1281px) {
