@@ -42,7 +42,12 @@ export class EsaiSingkatComponent implements OnInit {
   esaiFormSave(): any {
     this.isSubmitted = true;
     if (!this.esaiForm.valid) {
-      swal.fire('Isi semua esai kamu!');
+      swal.fire({
+        title: "Oops...",
+        text: "Isi semua esai kamu!",
+        icon: "error",
+        confirmButtonText: "Siap!"
+      });
     } else {
       sessionStorage.setItem('odyssey', (document.getElementById('odyssey') as HTMLTextAreaElement).value);
       sessionStorage.setItem('improvement_mxm', (document.getElementById('improvement_mxm') as HTMLTextAreaElement).value);

@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {OprecApiService} from '../../_shared/services/oprec-api.service';
 import * as $ from 'jquery';
 import {Router} from '@angular/router';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-penilaian-kepribadian',
@@ -19,6 +20,22 @@ export class PenilaianKepribadianComponent implements OnInit {
 
   ngOnInit() {
     this.questions = this.oprecApiService.getBigFiveQ();
+    swal.fire({
+      width: '520px',
+      title: '<strong style="font-family: canaro-bold;">Jadwal Seleksi Penerimaan Panitia MAXIMA 2020</strong>',
+      icon: 'info',
+      html:
+        '<div style="font-family: canaro-medium">' +
+        "<h4>10-13 FEB</h5></h4><h6>Open Recruitment</h6>" +
+        "<h4>14 FEB</h4><h6>Penilaian Formulir</h6>" +
+        "<h4>15 FEB</h4><h6>Pengumuman Tahap Seleksi Formulir</h6>" +
+        "<h4>17-21 FEB</h4><h6>Seleksi Terbuka</h6>" +
+        "<h4>23 FEB</h4><h6>Pengumuman Penerimaan Panitia MAXIMA 2020</h6>" +
+        "<h4>27 FEB</h4><h6>Forum Perdana MAXIMA 2020</h6>" +
+        '</div>',
+      confirmButtonText: 'Mengerti!',
+      confirmButtonColor: '#F4224B'
+    });
   }
 
   consoles() {
@@ -92,6 +109,5 @@ export class PenilaianKepribadianComponent implements OnInit {
     console.log('O = ' + oScore);
     sessionStorage.setItem('oScore', oScore.toString());
 
-    this.router.navigate(['oprec/saran-divisi']);
   }
 }

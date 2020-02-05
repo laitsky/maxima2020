@@ -1,61 +1,49 @@
 <div id="base-layer" class="container-fluid py-3">
-<div id="head"><h1>Penilaian<br>Kepribadian</h1></div>
-<div id="esai-container" class="container  pb-3 rounded">
-    
-<table class="table table-hover">
-</table>
-<div class="row">
-    <div class="col-md-3">
-    </div>
-    <p> Nilai <b>1</b> menandakan <b><u>sangat tidak setuju</u></b>, sedangkan nilai <b>5</b> menandakan <b><u>sangat setuju</u></b>. </p>
-    <div class="col-md-3">
-    </div>
-</div>
-<div *ngFor="let question of questions | async; let i = index" style="padding: 10px;" class="center">
-    <div>
-        <div class="row col-md-12" style="overflow-wrap:break-word;"> <!-- soal -->
-            <p class="textsoal center"><b><h5>{{ question.pertanyaan }}</h5></b></p>
+  <div id="head"><h1>Penilaian<br>Kepribadian</h1></div>
+  <div id="esai-container" class="container  pb-3 rounded">
 
+    <table class="table table-hover">
+    </table>
+    <div class="text-center">
+      <p>Nilai 1 menandakan sangat tidak setuju, sedangkan nilai 5 menandakan sangat setuju.</p>
+    </div>
+    <div *ngFor="let question of questions | async; let i = index" style="padding: 10px;" class="center">
+      <div> <!-- soal -->
+        <div class="text-center">
+          <h5>{{question.pertanyaan}}</h5>
         </div>
         <div class="row col-md-12 center" style="float:center;">
-            <div class="col-md-1 center" style="display:inline-block;"> </div>
-            <div style="display:inline-block;"> <!-- caption sangat tidak setuju -->
-                <a class="initext_1"><h6>1&nbsp;&nbsp;</h6> </a> 
+          <div class="col-md-1 center" style="display:inline-block;"></div>
+          <div style="display:inline-block;"> <!-- caption sangat tidak setuju -->
+            <a class="initext_1"><h6>1&nbsp;&nbsp;</h6></a>
+          </div>
+          <div style="display:inline-block;"> <!-- respon -->
+            <div style="float: left;padding-top: 8px;">
+              <input type="radio" class="radio1" value="1" name="radio{{i+1}}" required>
             </div>
-            <div style="display:inline-block;"> <!-- respon -->
-                <div style="float: left;padding-top: 8px;">
-                    <input type="radio" class="radio1" value="1" name="radio{{i+1}}" required>
-                </div>
-                <div style="float: left;padding-left: 5px;padding-top: 8px;">
-                    <input type="radio" class="radio1" value="2" name="radio{{i+1}}">
-                </div>
-                <div style="float: left;padding-left: 5px;padding-top: 8px;">
-                    <input type="radio" class="radio1" value="3" name="radio{{i+1}}">
-                </div>
-                <div style="float: left;padding-left: 5px;padding-top: 8px;">
-                    <input type="radio" class="radio1" value="4" name="radio{{i+1}}">
-                </div>
-                <div style="float: left;padding-left: 5px;padding-right: 5px;padding-top: 8px;">
-                    <input type="radio" class="radio1" value="5" name="radio{{i+1}}">
-                </div>  
+            <div style="float: left;padding-left: 5px;padding-top: 8px;">
+              <input type="radio" class="radio1" value="2" name="radio{{i+1}}">
             </div>
-            <div> <!-- caption sangat setuju -->
-                <a class="initext_1"><h6 style="text-align: right">5</h6></a>
+            <div style="float: left;padding-left: 5px;padding-top: 8px;">
+              <input type="radio" class="radio1" value="3" name="radio{{i+1}}">
             </div>
-            <div class="col-md-1 center" style="display:inline-block;"> </div>
+            <div style="float: left;padding-left: 5px;padding-top: 8px;">
+              <input type="radio" class="radio1" value="4" name="radio{{i+1}}">
+            </div>
+            <div style="float: left;padding-left: 5px;padding-right: 5px;padding-top: 8px;">
+              <input type="radio" class="radio1" value="5" name="radio{{i+1}}">
+            </div>
+          </div>
+          <div> <!-- caption sangat setuju -->
+            <a class="initext_1"><h6 style="text-align: right">5</h6></a>
+          </div>
+          <div class="col-md-1 center" style="display:inline-block;"></div>
         </div>
-
-
+      </div>
+      <br>
     </div>
-    <br>
+    <div class="centers">
+      <input type="submit" value="Submit" (click)="consoles()" class="press press-ghost press-pill press-pink press-lg" routerLink="/oprec/saran-divisi">
+    </div>
+  </div>
 </div>
-<div class="centers">
-    <input type="submit" value="Submit" (click)="consoles()" class="press press-ghost press-pill press-pink press-lg">
-</div>
-</div>
-</div>
-
-<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
-<link href='https://fonts.googleapis.com/css?family=Do Hyeon' rel='stylesheet'>
-
-

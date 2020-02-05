@@ -68,13 +68,18 @@ export class FormOprecComponent implements OnInit {
   }
 
   /* cek token */
-  // nilai token 2 huruf pertama nama divisi, 4 karakter no urut pendaftaran (lg dicari caranya), 2 angka selanjutnya random dari detik 
-  
+  // nilai token 2 huruf pertama nama divisi, 4 karakter no urut pendaftaran (lg dicari caranya), 2 angka selanjutnya random dari detik
+
   /* menyimpan hasil submission form ke sessionStorage */
   oprecFormSave() {
     this.isSubmitted = true;
     if (!this.oprecForm.valid) {
-      swal.fire('Lengkapi data kamu!');
+      swal.fire({
+        title: "Oops...",
+        text: "Lengkapi data kamu!",
+        icon: "error",
+        confirmButtonText: "Siap!"
+      });
     } else {
       sessionStorage.setItem('nama_lengkap', this.fd.nama_lengkap.value);
       sessionStorage.setItem('tempat_lahir', this.fd.tempat_lahir.value);
