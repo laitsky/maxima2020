@@ -1,5 +1,5 @@
 <body>
-<video autoplay="autoplay" muted loop id="myVideo">
+<video id="myVideo" preload autoplay muted loop >
   <source src="assets/rain.mp4" type="video/mp4">
 </video>
 <div class="content">
@@ -7,11 +7,19 @@
     <div class="text-center">
       <img id="mxm20-logo" src="assets/mxm20_logo.png" alt="Logo MAXIMA 2020">
       <br>
-      <button id="start-button" class="press press-red press-pill press-ghost press-lg"
-              routerLink="/oprec/penilaian-kepribadian"><i class="las la-hand-point-up"></i>
-        <div id="start-btn-text"></div>
-      </button>
+      <div style="width: 100%;">
+          <div id="status_regis" class="transbox"> </div>
+          <br>
+          <div id="buat_button">
+              <button id="start-button" class="press press-red press-pill press-ghost press-lg"
+              routerLink="/oprec/penilaian-kepribadian">
+                <i class="las la-hand-point-up"></i>
+              </button>
+          </div>
+      </div>
+      <br>
     </div>
   </div>
+  <br>
 </div>
 </body>
