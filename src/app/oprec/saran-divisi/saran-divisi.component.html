@@ -1,152 +1,45 @@
 <div id="base-layer" class="container-fluid py-3">
   <div id="head"><h1>Divisi<br>MAXIMA</h1></div>
   <div id="esai-container" class="container pb-3 rounded">
-    <div>
-      <div class="card px-5 mb-3 pt-3 container-fluid" style="display:inline-block;text-align:center;">
-        <h3>HASIL TES KAMU MENUNJUKKAN...</h3>
-        <div class="row">
-          <div class="col">
-            <p id="aScore" style="font-size: larger;"></p>
-          </div>
-          <div class="col">
-            <p id="cScore" style="font-size: larger;"></p>
-          </div>
-          <div class="col">
-            <p id="eScore" style="font-size: larger;"></p>
-          </div>
-          <div class="col">
-            <p id="nScore" style="font-size: larger;"></p>
-          </div>
-          <div class="col">
-            <p id="oScore" style="font-size: larger;"></p>
+    <div class="card px-5 mb-3 pt-3 text-center container-fluid">
+      <h3>Hasil tes kamu menunjukkan...</h3>
+      <div class="row">
+        <div class="col">
+          <p id="aScore" style="font-size: larger;"></p>
+        </div>
+        <div class="col">
+          <p id="cScore" style="font-size: larger;"></p>
+        </div>
+        <div class="col">
+          <p id="eScore" style="font-size: larger;"></p>
+        </div>
+        <div class="col">
+          <p id="nScore" style="font-size: larger;"></p>
+        </div>
+        <div class="col">
+          <p id="oScore" style="font-size: larger;"></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card-deck col-md-4 pb-3" *ngFor="let datum of data">
+        <div class="card">
+          <img class="card-img-top"
+               src="{{datum.ilustrasi_divisi}}"
+               alt="Ilustrasi divisi">
+          <div class="card-body">
+            <div class="card-title">
+              <h6 style="color: #1F2C4C;">Divisi</h6>
+              <h4 style="font-weight: bolder; color: #F4224B;">{{datum.divisi}}</h4>
+            </div>
+            <p class="card-text" style="color: #1F2C4C;">{{datum.deskripsi}}</p>
+            <p class="card-text"><small class="text-muted">Cocok untuk <span
+              style="color: #41CEBA;">{{datum.cocok_untuk}}</span> </small></p>
           </div>
         </div>
       </div>
-      <div class="card-deck">
-        <div class="card">
-          <img class="card-img-top"
-               src="https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/io19_designguide_hero_C_Share_UbDlrD3.png"
-               alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content.
-              This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top"
-               src="https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/io19_designguide_hero_C_Share_UbDlrD3.png"
-               alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top"
-               src="https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/io19_designguide_hero_C_Share_UbDlrD3.png"
-               alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content.
-              This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top"
-               src="https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/io19_designguide_hero_C_Share_UbDlrD3.png"
-               alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content.
-              This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top"
-               src="https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/io19_designguide_hero_C_Share_UbDlrD3.png"
-               alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content.
-              This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-      </div>
-      <br> <br>
-      <div class="card-deck">
-        <div class="card">
-          <img class="card-img-top"
-               src="https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/io19_designguide_hero_C_Share_UbDlrD3.png"
-               alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content.
-              This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top"
-               src="https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/io19_designguide_hero_C_Share_UbDlrD3.png"
-               alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top"
-               src="https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/io19_designguide_hero_C_Share_UbDlrD3.png"
-               alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content.
-              This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top"
-               src="https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/io19_designguide_hero_C_Share_UbDlrD3.png"
-               alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content.
-              This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top"
-               src="https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/io19_designguide_hero_C_Share_UbDlrD3.png"
-               alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content.
-              This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="text-center">
+      <div class="text-center col-md-12">
         <button routerLink="/oprec/form-oprec" class="press press-ghost press-pill press-lg press-pink">Isi data diri
         </button>
       </div>
     </div>
-  </div>

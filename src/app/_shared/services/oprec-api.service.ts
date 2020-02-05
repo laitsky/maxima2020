@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {BigFiveQuestions} from '../models/oprec/big_five_q';
 import {PertanyaanDivisi} from '../models/oprec/pertanyaan_divisi';
+import {SaranDivisi} from "../models/oprec/saran_divisi";
 
 @Injectable({
   providedIn: 'root'
@@ -20,5 +21,9 @@ export class OprecApiService {
 
   getDivQueList(): Observable<PertanyaanDivisi[]> { // mendapatkan pertanyaan untuk EsaiSingkatComponent
     return this.http.get<PertanyaanDivisi[]>(`${this.API_URL}/api/pertanyaan_divisi.json`);
+  }
+
+  getSaranDivisi(): Observable<SaranDivisi> { // mendapatkan informasi untuk SaranDivisiComponent
+    return this.http.get<SaranDivisi>(`${this.API_URL}/api/saran_divisi.json`);
   }
 }

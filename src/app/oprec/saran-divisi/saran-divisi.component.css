@@ -11,6 +11,7 @@
 }
 
 #esai-container {
+  font-family: canaro-medium;
   margin-top: 2%;
   margin-bottom: 3%;
   padding: 5%;
@@ -28,5 +29,4 @@
   height: 100%;
   padding-left: 11%;
   padding-right: 11%;
-
 }

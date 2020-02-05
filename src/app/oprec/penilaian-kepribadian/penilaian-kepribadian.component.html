@@ -10,7 +10,7 @@
     <div *ngFor="let question of questions | async; let i = index" style="padding: 10px;" class="center">
       <div> <!-- soal -->
         <div class="text-center">
-          <h5>{{question.pertanyaan}}</h5>
+          <h5>{{i+1}}. {{question.pertanyaan}}</h5>
         </div>
         <div class="row col-md-12 center" style="float:center;">
           <div class="col-md-1 center" style="display:inline-block;"></div>
