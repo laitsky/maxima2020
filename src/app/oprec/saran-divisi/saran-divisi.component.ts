@@ -17,11 +17,11 @@ export class SaranDivisiComponent implements OnInit {
   }
 
   ngOnInit() {
-    document.getElementById('aScore').innerHTML = `Agreeableness: <b> ${sessionStorage.getItem('aScore')} </b>`;
-    document.getElementById('cScore').innerHTML = `Conscientious: <b> ${sessionStorage.getItem('cScore')}</b>`;
-    document.getElementById('eScore').innerHTML = `Extraversion: <b> ${sessionStorage.getItem('eScore')}</b>`;
-    document.getElementById('nScore').innerHTML = `Neuroticism: <b> ${sessionStorage.getItem('nScore')}</b>`;
-    document.getElementById('oScore').innerHTML = `Openness: <b> ${sessionStorage.getItem('oScore')}</b>`;
+    document.getElementById('aScore').innerHTML = `<i>Agreeableness</i>:<br> <b> ${sessionStorage.getItem('aScore')} </b>`;
+    document.getElementById('cScore').innerHTML = `<i>Conscientious</i>:<br> <b> ${sessionStorage.getItem('cScore')}</b>`;
+    document.getElementById('eScore').innerHTML = `<i>Extraversion</i>:<br> <b> ${sessionStorage.getItem('eScore')}</b>`;
+    document.getElementById('nScore').innerHTML = `<i>Neuroticism</i>:<br> <b> ${sessionStorage.getItem('nScore')}</b>`;
+    document.getElementById('oScore').innerHTML = `<i>Openness</i>:<br> <b> ${sessionStorage.getItem('oScore')}</b>`;
   }
 
 }
