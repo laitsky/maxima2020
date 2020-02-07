@@ -14,6 +14,8 @@ export class OprecWelcomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    let vid = <HTMLVideoElement> document.getElementById("myVideo");
+    vid.muted = true;
     this.tombol_mulai();
     $('#start-button').hover(function () {
       $('#mxm20-logo').removeClass('filter-bnw');
