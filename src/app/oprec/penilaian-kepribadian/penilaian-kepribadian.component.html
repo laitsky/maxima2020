@@ -7,7 +7,7 @@
     <div class="text-center">
       <p>Nilai 1 menandakan sangat tidak setuju, sedangkan nilai 5 menandakan sangat setuju.</p>
     </div>
-    <div *ngFor="let question of questions | async; let i = index" style="padding: 10px;" class="center">
+    <div *ngFor="let question of questions | async; let i = index" style="padding: 10px;" class="center" id="soalsoal">
       <div> <!-- soal -->
         <div class="text-center">
           <h5>{{i+1}}. {{question.pertanyaan}}</h5>
@@ -18,21 +18,23 @@
             <a class="initext_1"><h6>1&nbsp;&nbsp;</h6></a>
           </div>
           <div style="display:inline-block;"> <!-- respon -->
-            <div style="float: left;padding-top: 8px;">
-              <input type="radio" class="radio1" value="1" name="radio{{i+1}}" required>
-            </div>
-            <div style="float: left;padding-left: 5px;padding-top: 8px;">
-              <input type="radio" class="radio1" value="2" name="radio{{i+1}}">
-            </div>
-            <div style="float: left;padding-left: 5px;padding-top: 8px;">
-              <input type="radio" class="radio1" value="3" name="radio{{i+1}}">
-            </div>
-            <div style="float: left;padding-left: 5px;padding-top: 8px;">
-              <input type="radio" class="radio1" value="4" name="radio{{i+1}}">
-            </div>
-            <div style="float: left;padding-left: 5px;padding-right: 5px;padding-top: 8px;">
-              <input type="radio" class="radio1" value="5" name="radio{{i+1}}">
-            </div>
+            <fieldset id="group{{i+1}}">
+              <div style="float: left;padding-top: 8px;">
+                <input type="radio" class="radio1" value="1" name="radio{{i+1}}" required>
+              </div>
+              <div style="float: left;padding-left: 5px;padding-top: 8px;">
+                <input type="radio" class="radio1" value="2" name="radio{{i+1}}">
+              </div>
+              <div style="float: left;padding-left: 5px;padding-top: 8px;">
+                <input type="radio" class="radio1" value="3" name="radio{{i+1}}">
+              </div>
+              <div style="float: left;padding-left: 5px;padding-top: 8px;">
+                <input type="radio" class="radio1" value="4" name="radio{{i+1}}">
+              </div>
+              <div style="float: left;padding-left: 5px;padding-right: 5px;padding-top: 8px;">
+                <input type="radio" class="radio1" value="5" name="radio{{i+1}}">
+              </div>
+            </fieldset>
           </div>
           <div> <!-- caption sangat setuju -->
             <a class="initext_1"><h6 style="text-align: right">5</h6></a>
@@ -42,8 +44,11 @@
       </div>
       <br>
     </div>
+    
+    <div id="belumisi" style="margin: auto; width: 30%;"> </div>
+    
     <div class="centers">
-      <input type="submit" value="Submit" (click)="consoles()" class="press press-ghost press-pill press-pink press-lg" routerLink="/oprec/saran-divisi">
+      <input type="submit" value="Submit" (click)="consoles()" class="press press-ghost press-pill press-pink press-lg">
     </div>
   </div>
 </div>
