@@ -39,6 +39,17 @@ export class PenilaianKepribadianComponent implements OnInit {
   }
 
   consoles() {
+    var i, checker = 1, tester;
+    for(i = 1; i < 51; i++) {
+      tester =  isNaN(parseInt($(`input[name="radio${i}"]:checked`).val()));
+      if (tester == true) {
+        checker = 0;
+        document.getElementById('belumisi').innerHTML = `
+        <p style="color: #F4224B"> Kamu belum mengisi semua pertanyaan! </p>`;
+      };
+    }
+      
+    if (checker == 1) {
     const eScore = 20 +
       parseInt($('input[name="radio1"]:checked').val()) -
       parseInt($('input[name="radio6"]:checked').val()) +
@@ -108,6 +119,10 @@ export class PenilaianKepribadianComponent implements OnInit {
       parseInt($('input[name="radio50"]:checked').val());
     console.log('O = ' + oScore);
     sessionStorage.setItem('oScore', oScore.toString());
-
+    
+    console.log('tes1');
+    this.router.navigate(['/oprec/saran-divisi']);
+    console.log('tes2');
+  } //tutup checker
   }
 }
