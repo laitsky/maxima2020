@@ -19,7 +19,8 @@ label {
 }
 
 #selected-division {
-  font-weight: bold;
+  font-family: canaro-bold;
+
 }
 
 #base-layer {

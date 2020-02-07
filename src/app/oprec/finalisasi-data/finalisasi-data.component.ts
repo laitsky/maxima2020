@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {FormGroup, FormBuilder, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 
-import { format } from 'url';
 @Component({
   selector: 'app-finalisasi-data',
   templateUrl: './finalisasi-data.component.html',
@@ -44,6 +43,7 @@ export class FinalisasiDataComponent implements OnInit {
       odyssey: [{value: sessionStorage.getItem('odyssey'), disabled: true}, Validators.required],
       improvement_mxm: [{value: sessionStorage.getItem('improvement_mxm'), disabled: true}, Validators.required],
       pertanyaan_divisi: [{value: sessionStorage.getItem('pertanyaan_divisi'), disabled: true}, Validators.required],
+      kepanitiaan_diikuti: [{value: sessionStorage.getItem('kepanitiaan_diikuti'), disabled: true}, Validators.required],
 
       token_regis: [{value: sessionStorage.getItem('token'), disabled: true}, Validators.required]
     });

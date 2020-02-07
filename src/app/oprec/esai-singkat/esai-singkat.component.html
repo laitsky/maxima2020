@@ -4,7 +4,7 @@
     <form [formGroup]="esaiForm" (ngSubmit)="esaiFormSave()">
       <div id="textarea-container">
         <div class="form-group">
-          <label for="odyssey">Bagaimana kamu mendefinisikan <strong>odyssey</strong> sebagai tema MAXIMA 2020?</label>
+          <label for="odyssey">Bagaimana kamu mendefinisikan <span style="font-family: canaro-bold;">odyssey</span> sebagai tema MAXIMA 2020?</label>
           <textarea id="odyssey" class="text-input form-control" rows="7" cols="50" formControlName="odyssey"
                     [ngClass]="{ 'is-invalid': isSubmitted && fd.odyssey.errors}"></textarea>
           <div *ngIf="isSubmitted && fd.odyssey.errors" class="invalid-feedback">
@@ -31,13 +31,24 @@
                     formControlName="pertanyaan_divisi"
                     [ngClass]="{ 'is-invalid': isSubmitted && fd.pertanyaan_divisi.errors}"></textarea>
           <div *ngIf="isSubmitted && fd.pertanyaan_divisi.errors" class="invalid-feedback">
-                     <div *ngIf="fd.pertanyaan_divisi.errors.required">
+            <div *ngIf="fd.pertanyaan_divisi.errors.required">
               Pertanyaan divisi harus dijawab
             </div>
           </div>
         </div>
         <div class="form-group">
-          <button class="press press-pill press-blue btn-block" style="color: white;">Kirim Esai</button>
+          <label for="kepanitiaan_diikuti">Kepanitiaan apa yang kamu sedang ikuti?</label>
+          <textarea id="kepanitiaan_diikuti" class="text-input form-control" rows="7" cols="50"
+                    formControlName="kepanitiaan_diikuti"
+                    [ngClass]="{ 'is-invalid': isSubmitted && fd.kepanitiaan_diikuti.errors}"></textarea>
+          <div *ngIf="isSubmitted && fd.kepanitiaan_diikuti.errors" class="invalid-feedback">
+            <div *ngIf="fd.kepanitiaan_diikuti.errors.required">
+              Pertanyaan ini harus dijawab
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <button class="press press-pill press-raised press-blue btn-block mt-3" style="color: white;">Kirim Esai</button>
         </div>
       </div>
     </form>

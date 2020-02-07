@@ -26,7 +26,7 @@ export class PenilaianKepribadianComponent implements OnInit {
       icon: 'info',
       html:
         '<div style="font-family: canaro-medium">' +
-        "<h4>10-13 FEB</h5></h4><h6>Open Recruitment</h6>" +
+        "<h4>10-14 FEB</h5></h4><h6>Open Recruitment</h6>" +
         "<h4>14 FEB</h4><h6>Penilaian Formulir</h6>" +
         "<h4>15 FEB</h4><h6>Pengumuman Tahap Seleksi Formulir</h6>" +
         "<h4>17-21 FEB</h4><h6>Seleksi Terbuka</h6>" +

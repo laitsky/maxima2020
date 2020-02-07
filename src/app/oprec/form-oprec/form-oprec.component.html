@@ -25,7 +25,7 @@
         </div>
         <div class="form-group col-md-2">
           <label for="tanggal_lahir">Tanggal Lahir</label>
-          <input id="tanggal_lahir" type="date" formControlName="tanggal_lahir" class="form-control"
+          <input id="tanggal_lahir" type="date" formControlName="tanggal_lahir" class="form-control" max="9999-12-31"
                  [ngClass]="{ 'is-invalid': isSubmitted && fd.tanggal_lahir.errors}">
           <div *ngIf="isSubmitted && fd.tanggal_lahir.errors" class="invalid-feedback">
             <div *ngIf="fd.tanggal_lahir.errors.required">
