@@ -121,7 +121,15 @@
 @media (min-width: 320px) {
   /* smartphones, iPhone, portrait 480x320 phones */
   #soalsoal {
-    width: 83%;
+    width: 96%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 360px) {
+  /* smartphones, iPhone, portrait 480x320 phones */
+  #soalsoal {
+    width: 85%;
     margin: auto;
   }
 }
