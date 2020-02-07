@@ -26,12 +26,12 @@ export class PenilaianKepribadianComponent implements OnInit {
       icon: 'info',
       html:
         '<div style="font-family: canaro-medium">' +
-        "<h4>10-13 FEB</h5></h4><h6>Open Recruitment</h6>" +
-        "<h4>14 FEB</h4><h6>Penilaian Formulir</h6>" +
-        "<h4>15 FEB</h4><h6>Pengumuman Tahap Seleksi Formulir</h6>" +
-        "<h4>17-21 FEB</h4><h6>Seleksi Terbuka</h6>" +
-        "<h4>23 FEB</h4><h6>Pengumuman Penerimaan Panitia MAXIMA 2020</h6>" +
-        "<h4>27 FEB</h4><h6>Forum Perdana MAXIMA 2020</h6>" +
+        '<h4>10-14 FEB</h5></h4><h6>Open Recruitment</h6>' +
+        '<h4>14 FEB</h4><h6>Penilaian Formulir</h6>' +
+        '<h4>15 FEB</h4><h6>Pengumuman Tahap Seleksi Formulir</h6>' +
+        '<h4>17-21 FEB</h4><h6>Seleksi Terbuka</h6>' +
+        '<h4>23 FEB</h4><h6>Pengumuman Penerimaan Panitia MAXIMA 2020</h6>' +
+        '<h4>27 FEB</h4><h6>Forum Perdana MAXIMA 2020</h6>' +
         '</div>',
       confirmButtonText: 'Mengerti!',
       confirmButtonColor: '#F4224B'
@@ -39,16 +39,21 @@ export class PenilaianKepribadianComponent implements OnInit {
   }
 
   consoles() {
-    var i, checker = 1, tester;
-    for(i = 1; i < 51; i++) {
+    let i, checker = 1, tester;
+    for (i = 1; i < 51; i++) {
       tester =  isNaN(parseInt($(`input[name="radio${i}"]:checked`).val()));
       if (tester == true) {
         checker = 0;
-        document.getElementById('belumisi').innerHTML = `
-        <p style="color: #F4224B"> Kamu belum mengisi semua pertanyaan! </p>`;
-      };
+        swal.fire({
+          title: 'Oops...',
+          text: 'Kamu belum mengisi mengisi semua pertanyaan!',
+          icon: 'error',
+          confirmButtonText: 'Saya akan mengisi semua pertanyaan!',
+          confirmButtonColor: '#F4224B'
+        });
+      }
     }
-      
+
     if (checker == 1) {
     const eScore = 20 +
       parseInt($('input[name="radio1"]:checked').val()) -
@@ -64,7 +69,7 @@ export class PenilaianKepribadianComponent implements OnInit {
     console.log('E = ' + eScore);
     sessionStorage.setItem('eScore', eScore.toString());
 
-    let aScore = 14 -
+    const aScore = 14 -
       parseInt($('input[name="radio2"]:checked').val()) +
       parseInt($('input[name="radio7"]:checked').val()) -
       parseInt($('input[name="radio12"]:checked').val()) +
@@ -78,7 +83,7 @@ export class PenilaianKepribadianComponent implements OnInit {
     console.log('A = ' + aScore);
     sessionStorage.setItem('aScore', aScore.toString());
 
-    let cScore = 14 +
+    const cScore = 14 +
       parseInt($('input[name="radio3"]:checked').val()) -
       parseInt($('input[name="radio8"]:checked').val()) +
       parseInt($('input[name="radio13"]:checked').val()) -
@@ -92,7 +97,7 @@ export class PenilaianKepribadianComponent implements OnInit {
     console.log('C = ' + cScore);
     sessionStorage.setItem('cScore', cScore.toString());
 
-    let nScore = 38 -
+    const nScore = 38 -
       parseInt($('input[name="radio4"]:checked').val()) +
       parseInt($('input[name="radio9"]:checked').val()) -
       parseInt($('input[name="radio14"]:checked').val()) +
@@ -106,7 +111,7 @@ export class PenilaianKepribadianComponent implements OnInit {
     console.log('N = ' + nScore);
     sessionStorage.setItem('nScore', nScore.toString());
 
-    let oScore = 8 +
+    const oScore = 8 +
       parseInt($('input[name="radio5"]:checked').val()) -
       parseInt($('input[name="radio10"]:checked').val()) +
       parseInt($('input[name="radio15"]:checked').val()) -
@@ -119,10 +124,10 @@ export class PenilaianKepribadianComponent implements OnInit {
       parseInt($('input[name="radio50"]:checked').val());
     console.log('O = ' + oScore);
     sessionStorage.setItem('oScore', oScore.toString());
-    
+
     console.log('tes1');
     this.router.navigate(['/oprec/saran-divisi']);
     console.log('tes2');
-  } //tutup checker
+  } // tutup checker
   }
 }

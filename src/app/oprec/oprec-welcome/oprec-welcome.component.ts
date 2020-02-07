@@ -14,6 +14,7 @@ export class OprecWelcomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    let promise = document.querySelector('video').play();
     this.tombol_mulai();
     $('#start-button').hover(function () {
       $('#mxm20-logo').removeClass('filter-bnw');
@@ -25,9 +26,17 @@ export class OprecWelcomeComponent implements OnInit {
     });
   }
 
+  next() {
+    this.router.navigate(['oprec/penilaian-kepribadian'])
+      .then(() => {
+        window.location.reload();
+        sessionStorage.clear();
+      });
+  }
+
   tombol_mulai() {
-    if (moment().isBefore('2020 02 7, 0:00:00 am')) { //sebelom wktu ini ditutup
-      (<HTMLInputElement> document.getElementById('start-button')).disabled = true;
+    if (moment().isBefore('2020 02 5, 0:00:00 am')) { //sebelom wktu ini ditutup
+      (<HTMLInputElement>document.getElementById('start-button')).disabled = true;
       let countDownDate = new Date("Feb 10, 2020 00:00:00").getTime();
       let x = setInterval(function () {
         let now = new Date().getTime();
@@ -47,7 +56,7 @@ export class OprecWelcomeComponent implements OnInit {
       }, 1000);
     } else if (moment().isAfter('2020 02 14, 6:52:00 pm')) { //setelah wktu ini ditutup
 
-      (<HTMLInputElement> document.getElementById('start-button')).disabled = true;
+      (<HTMLInputElement>document.getElementById('start-button')).disabled = true;
       document.getElementById('status_regis').innerHTML = `
       <i class="las la-clock"></i>
       <p> Pendaftaran sudah ditutup! </p>`;

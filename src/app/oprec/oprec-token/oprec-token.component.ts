@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-declare var particlesJS: any;
 @Component({
   selector: 'app-oprec-token',
   templateUrl: './oprec-token.component.html',
@@ -10,7 +9,6 @@ export class OprecTokenComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    sessionStorage.clear();
   }
 
 }

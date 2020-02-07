@@ -1,9 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {FormGroup, FormBuilder, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {OprecApiService} from '../../_shared/services/oprec-api.service';
 import {PertanyaanDivisi} from '../../_shared/models/oprec/pertanyaan_divisi';
 import swal from 'sweetalert2';
+
 @Component({
   selector: 'app-esai-singkat',
   templateUrl: './esai-singkat.component.html',
@@ -24,7 +25,8 @@ export class EsaiSingkatComponent implements OnInit {
     this.esaiForm = this.formBuilder.group({
       odyssey: ['', Validators.required],
       improvement_mxm: ['', Validators.required],
-      pertanyaan_divisi: ['', Validators.required]
+      pertanyaan_divisi: ['', Validators.required],
+      kepanitiaan_diikuti: ['', Validators.required]
     });
 
     this.oprecApiService.getDivQueList().subscribe(result => {
@@ -43,15 +45,16 @@ export class EsaiSingkatComponent implements OnInit {
     this.isSubmitted = true;
     if (!this.esaiForm.valid) {
       swal.fire({
-        title: "Oops...",
-        text: "Isi semua esai kamu!",
-        icon: "error",
-        confirmButtonText: "Siap!"
+        title: 'Oops...',
+        text: 'Isi semua esai kamu!',
+        icon: 'error',
+        confirmButtonText: 'Siap!'
       });
     } else {
       sessionStorage.setItem('odyssey', (document.getElementById('odyssey') as HTMLTextAreaElement).value);
       sessionStorage.setItem('improvement_mxm', (document.getElementById('improvement_mxm') as HTMLTextAreaElement).value);
       sessionStorage.setItem('pertanyaan_divisi', (document.getElementById('pertanyaan_divisi') as HTMLTextAreaElement).value);
+      sessionStorage.setItem('kepanitiaan_diikuti', (document.getElementById('kepanitiaan_diikuti') as HTMLTextAreaElement).value);
       this.router.navigate(['oprec/finalisasi-data'])
         .then(() => {
           window.location.reload();

@@ -67,9 +67,6 @@
                   <label for="email">Email Student</label>
                   <div class="input-group mb-3">
                     <input id="email" name="email" type="email" formControlName="email" class="form-control">
-                    <div class="input-group-append">
-                      <span class="input-group-text">@student.umn.ac.id</span>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -178,29 +175,34 @@
 
                 <div class="form-group col-md-12">
                   <label for="odyssey"> Bagaimana kamu mendefinisikan <strong>odyssey</strong> sebagai tema MAXIMA 2020?</label>
-                  <input id="odyssey" name="odyssey" type="text" formControlName="odyssey" class="form-control">
+                  <textarea rows="5" cols="50" id="odyssey" name="odyssey" type="text"
+                            formControlName="odyssey" class="form-control"> </textarea>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label for="improvement_mxm"> Apa yang akan kamu tingkatkan pada MAXIMA 2020? </label>
-                  <input id="improvement_mxm" name="improvement_mxm" type="text" formControlName="improvement_mxm"
-                         class="form-control">
-
+                  <textarea rows="5" cols="50" id="improvement_mxm" name="improvement_mxm" type="text"
+                            formControlName="improvement_mxm" class="form-control"> </textarea>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label for="pertanyaan_divisi"> Pertanyaan Divisi </label>
-                  <!-- <input id="pertanyaan_divisi" name="pertanyaan_divisi" type="text" formControlName="pertanyaan_divisi" class="form-control"> -->
-                  <textarea rows="3" cols="50" id="pertanyaan_divisi" name="pertanyaan_divisi" type="text"
+                  <textarea rows="5" cols="50" id="pertanyaan_divisi" name="pertanyaan_divisi" type="text"
                             formControlName="pertanyaan_divisi" class="form-control"> </textarea>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label for="pertanyaan_divisi"> Kepanitiaan yang diikuti </label>
+                  <textarea rows="5" cols="50" id="kepanitiaan_diikuti" name="kepanitiaan_diikuti" type="text"
+                            formControlName="kepanitiaan_diikuti" class="form-control"> </textarea>
                 </div>
               </div>
               <div class="form-row" id="buat_token">
                 <div class="form-group col-md-12" style="display:none;">
                   <label for="token_regis"> Token </label>
-                  <!-- <input id="pertanyaan_divisi" name="pertanyaan_divisi" type="text" formControlName="pertanyaan_divisi" class="form-control"> -->
                   <textarea rows="1" cols="50" id="token_regis" value="${sessionStorage.getItem('token')}"
                             name="token_regis" type="text" formControlName="token_regis"
                             class="form-control"> </textarea>
