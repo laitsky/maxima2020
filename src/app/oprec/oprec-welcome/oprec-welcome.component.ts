@@ -14,7 +14,6 @@ export class OprecWelcomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    let promise = document.querySelector('video').play();
     this.tombol_mulai();
     $('#start-button').hover(function () {
       $('#mxm20-logo').removeClass('filter-bnw');
