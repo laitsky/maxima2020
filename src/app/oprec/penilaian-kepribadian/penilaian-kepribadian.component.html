@@ -10,7 +10,8 @@
     <div *ngFor="let question of questions | async; let i = index" style="padding: 10px;" class="center" id="soalsoal">
       <div> <!-- soal -->
         <div class="text-center">
-          <h5>{{i+1}}. {{question.pertanyaan}}</h5>
+          <h5><span style="font-size: 0.8em; color: grey;"><sup>{{i + 1}}.</sup></span> {{question.pertanyaan}}
+          </h5>
         </div>
         <div class="row col-md-12 center" style="float:center;">
           <div class="col-md-1 center" style="display:inline-block;"></div>
@@ -44,9 +45,7 @@
       </div>
       <br>
     </div>
-    
-    <div id="belumisi" style="margin: auto; width: 30%;"> </div>
-    
+
     <div class="centers">
       <input type="submit" value="Submit" (click)="consoles()" class="press press-ghost press-pill press-pink press-lg">
     </div>

@@ -36,9 +36,9 @@ export class OprecWelcomeComponent implements OnInit {
   }
 
   tombol_mulai() {
-    if (moment().isBefore('2020 02 5, 0:00:00 am')) { //sebelom wktu ini ditutup
+    if (moment().isBefore('2020 02 10, 8:00:00 am')) { //sebelom wktu ini ditutup
       (<HTMLInputElement>document.getElementById('start-button')).disabled = true;
-      let countDownDate = new Date("Feb 10, 2020 00:00:00").getTime();
+      let countDownDate = new Date("Feb 10, 2020 08:00:00").getTime();
       let x = setInterval(function () {
         let now = new Date().getTime();
         let distance = countDownDate - now;
@@ -55,14 +55,14 @@ export class OprecWelcomeComponent implements OnInit {
         Pendaftaran akan dibuka dalam <br>
         ${days} hari ${hours} jam ${minutes} menit ${seconds} detik`;
       }, 1000);
-    } else if (moment().isAfter('2020 02 14, 6:52:00 pm')) { //setelah wktu ini ditutup
+    } else if (moment().isAfter('2020 02 14, 06:30:00 pm')) { //setelah wktu ini ditutup
 
       (<HTMLInputElement>document.getElementById('start-button')).disabled = true;
       document.getElementById('status_regis').innerHTML = `
       <i class="las la-clock"></i>
       <p> Pendaftaran sudah ditutup! </p>`;
     } else {
-        let countDownDate = new Date("Feb 14, 2020 00:00:00").getTime();
+        let countDownDate = new Date("Feb 14, 2020 18:30:00").getTime();
         let x = setInterval(function () {
           let now = new Date().getTime();
           let distance = countDownDate - now;
