@@ -1,9 +1,10 @@
 <div id="base-layer" class="container-fluid py-3">
+
   <div id="head"><h1 style="color: #41CEBA;">Finalisasi<br>Data</h1></div>
   <div id="esai-container" class="container  pb-3 rounded">
 
     <form [formGroup]="oprecForm" method="POST" data-email="lumiere03.testing@gmail.com" class="gform"
-          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScXM-QOhi0zBpIBZvVGCmKnabOvpYMMf51NyjSypohtGY5LSA/formResponse" target="_self"
+          action="https://script.google.com/macros/s/AKfycbzSsXLGHxZ5wm9WSmpuQg5naURXcD5b8qFHztjS/exec"
           (ngSubmit)="prosedurMaju()">
       <div class="accordion rounded" id="accordionForm">
         <!-- start of bagian satu -->
@@ -18,23 +19,23 @@
         <div id="collapseOne" class="collapse show card-body" aria-labelledby="headingOne" data-parent="#accordionForm">
           <div class="form-group">
             <label for="nama_lengkap">Nama Lengkap</label>
-            <input id="nama_lengkap" name="entry.191457269" type="text" formControlName="nama_lengkap"
+            <input id="nama_lengkap" name="nama_lengkap" type="text" formControlName="nama_lengkap"
                    class="form-control">
           </div>
           <div class="form-row">
             <div class="form-group col-md-3">
               <label for="tempat_lahir">Tempat Lahir</label>
-              <input id="tempat_lahir" name="entry.1744458500" type="text" formControlName="tempat_lahir"
+              <input id="tempat_lahir" name="tempat_lahir" type="text" formControlName="tempat_lahir"
                      class="form-control">
             </div>
             <div class="form-group col-md-2">
               <label for="tanggal_lahir">Tanggal Lahir</label>
-              <input id="tanggal_lahir" name="entry.2133337644" type="date" formControlName="tanggal_lahir"
+              <input id="tanggal_lahir" name="tanggal_lahir" type="date" formControlName="tanggal_lahir"
                      class="form-control">
             </div>
             <div class="form-group col-md-7">
               <label for="alamat">Alamat Tinggal</label>
-              <input id="alamat" name="entry.2003810374" type="text" formControlName="alamat" class="form-control">
+              <input id="alamat" name="alamat" type="text" formControlName="alamat" class="form-control">
             </div>
           </div>
         </div>
@@ -59,49 +60,49 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text">000000</span>
                     </div>
-                    <input id="nim" name="entry.1656627634" type="text" formControlName="nim" class="form-control">
+                    <input id="nim" name="nim" type="text" formControlName="nim" class="form-control">
                   </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="email">Email Student</label>
                   <div class="input-group mb-3">
-                    <input id="email" name="entry.1033020308" type="email" formControlName="email" class="form-control">
+                    <input id="email" name="email" type="email" formControlName="email" class="form-control">
                   </div>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="prodi">Program Studi</label>
-                  <input id="prodi" name="entry.488440435" type="text" formControlName="prodi" class="form-control">
+                  <input id="prodi" name="prodi" type="text" formControlName="prodi" class="form-control">
                 </div>
                 <div class="form-group col-md-4">
                   <label for="angkatan">Angkatan</label>
-                  <input id="angkatan" name="entry.10836282" type="text" formControlName="angkatan" class="form-control">
+                  <input id="angkatan" name="angkatan" type="text" formControlName="angkatan" class="form-control">
                 </div>
                 <div class="form-group col-md-2">
                   <label for="ips_terakhir">IPS Terakhir</label>
-                  <input id="ips_terakhir" name="entry.1353217638" type="text" formControlName="ips_terakhir"
+                  <input id="ips_terakhir" name="ips_terakhir" type="text" formControlName="ips_terakhir"
                          class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label for="divisi">Divisi</label>
-                <input id="divisi" name="entry.950712298" type="text" formControlName="divisi" class="form-control">
+                <input id="divisi" name="divisi" type="text" formControlName="divisi" class="form-control">
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="nomorHP">Nomor Handphone</label>
-                  <input id="nomorHP" name="entry.1690574777" type="text" formControlName="nomorHP" class="form-control">
+                  <input id="nomorHP" name="nomorHP" type="text" formControlName="nomorHP" class="form-control">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="nomorWA">Nomor WhatsApp</label>
-                  <input id="nomorWA" name="entry.2026782915" type="text" formControlName="nomorWA" class="form-control">
+                  <input id="nomorWA" name="nomorWA" type="text" formControlName="nomorWA" class="form-control">
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="uLine">LINE ID</label>
-                  <input id="uLine" name="entry.1618018805" type="text" formControlName="uLine" class="form-control">
+                  <input id="uLine" name="uLine" type="text" formControlName="uLine" class="form-control">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="uInstagram">Username Instagram</label>
@@ -109,7 +110,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text">@</span>
                     </div>
-                    <input id="uInstagram" name="entry.2142714720" type="text" formControlName="uInstagram"
+                    <input id="uInstagram" name="uInstagram" type="text" formControlName="uInstagram"
                            class="form-control">
                   </div>
                 </div>
@@ -131,26 +132,26 @@
           </div>
           <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionForm">
             <div class="card-body">
-              <div class="form-row" style="text-align: center;">
-                <div class="form-group col-md-2 mr-auto">
+              <div class="form-row">
+                <div class="form-group col-md-2">
                   <label for="eScore"> Extroversion (E) </label>
-                  <input id="eScore" name="entry.1289873119" type="text" formControlName="eScore" class="form-control">
+                  <input id="eScore" name="eScore" type="text" formControlName="eScore" class="form-control">
                 </div>
-                <div class="form-group col-md-2 mr-auto">
+                <div class="form-group col-md-2">
                   <label for="aScore"> Agreeableness (A) </label>
-                  <input id="aScore" name="entry.100052291" type="text" formControlName="aScore" class="form-control">
+                  <input id="aScore" name="aScore" type="text" formControlName="aScore" class="form-control">
                 </div>
-                <div class="form-group col-md-2 mr-auto">
-                  <label for="cScore"> Conscientiousness(C) </label>
-                  <input id="cScore" name="entry.1859513599" type="text" formControlName="cScore" class="form-control">
+                <div class="form-group col-md-2">
+                  <label for="cScore"> Conscientiousness (C) </label>
+                  <input id="cScore" name="cScore" type="text" formControlName="cScore" class="form-control">
                 </div>
-                <div class="form-group col-md-2 mr-auto">
+                <div class="form-group col-md-2">
                   <label for="nScore"> Neuroticism (N) </label>
-                  <input id="nScore" name="entry.897193719" type="text" formControlName="nScore" class="form-control">
+                  <input id="nScore" name="nScore" type="text" formControlName="nScore" class="form-control">
                 </div>
                 <div class="form-group col-md-2">
                   <label for="oScore"> Openness (O) </label>
-                  <input id="oScore" name="entry.263369192" type="text" formControlName="oScore" class="form-control">
+                  <input id="oScore" name="oScore" type="text" formControlName="oScore" class="form-control">
                 </div>
               </div>
             </div>
@@ -174,28 +175,28 @@
 
                 <div class="form-group col-md-12">
                   <label for="odyssey"> Bagaimana kamu mendefinisikan <strong>odyssey</strong> sebagai tema MAXIMA 2020?</label>
-                  <textarea rows="5" cols="50" id="odyssey" name="entry.91105398" type="text"
+                  <textarea rows="5" cols="50" id="odyssey" name="odyssey" type="text"
                             formControlName="odyssey" class="form-control"> </textarea>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label for="improvement_mxm"> Apa yang akan kamu tingkatkan pada MAXIMA 2020? </label>
-                  <textarea rows="5" cols="50" id="improvement_mxm" name="entry.1834889307" type="text"
+                  <textarea rows="5" cols="50" id="improvement_mxm" name="improvement_mxm" type="text"
                             formControlName="improvement_mxm" class="form-control"> </textarea>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label for="pertanyaan_divisi"> Pertanyaan Divisi </label>
-                  <textarea rows="5" cols="50" id="pertanyaan_divisi" name="entry.255849013" type="text"
+                  <textarea rows="5" cols="50" id="pertanyaan_divisi" name="pertanyaan_divisi" type="text"
                             formControlName="pertanyaan_divisi" class="form-control"> </textarea>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label for="pertanyaan_divisi"> Kepanitiaan yang sedang dan pernah diikuti </label>
-                  <textarea rows="5" cols="50" id="kepanitiaan_diikuti" name="entry.1858543271" type="text"
+                  <textarea rows="5" cols="50" id="kepanitiaan_diikuti" name="kepanitiaan_diikuti" type="text"
                             formControlName="kepanitiaan_diikuti" class="form-control"> </textarea>
                 </div>
               </div>
