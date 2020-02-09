@@ -3,6 +3,7 @@ import {Router} from '@angular/router';
 import * as $ from 'jquery';
 import * as moment from 'moment';
 import swal from 'sweetalert2';
+
 @Component({
   selector: 'app-oprec-welcome',
   templateUrl: './oprec-welcome.component.html',
@@ -16,10 +17,10 @@ export class OprecWelcomeComponent implements OnInit {
   ngOnInit() {
     swal.fire({
       title: "Perhatian!",
-      html:
+      html: '<div style="font-family: canaro-medium">' +
         '<h6>Untuk menghindari kesalahan sistem dalam pengiriman data, pengguna iOS (iPhone dan iPad)' +
-    ' dianjurkan untuk melakukan pendaftaran dengan perangkat di luar ekosistem Apple.</h6>' +
-    '<h6>Pengguna macOS (Macbook, iMac, dan sejenisnya) dapat melakukan pendaftaran dengan browser Chrome</h6>',
+        ' dianjurkan untuk melakukan pendaftaran dengan perangkat di luar ekosistem Apple.</h6>' +
+        '<h6>Pengguna macOS (Macbook, iMac, dan sejenisnya) dapat melakukan pendaftaran dengan browser Chrome</h6>' + '</div>',
       confirmButtonText: "Saya mengerti!",
       confirmButtonColor: "#F4224B",
       icon: "warning"
