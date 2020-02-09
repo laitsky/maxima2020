@@ -2,8 +2,9 @@
   <div id="head"><h1 style="color: #41CEBA;">Finalisasi<br>Data</h1></div>
   <div id="esai-container" class="container  pb-3 rounded">
 
-    <form [formGroup]="oprecForm" method="POST" class="gform"
-          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScXM-QOhi0zBpIBZvVGCmKnabOvpYMMf51NyjSypohtGY5LSA/formResponse" target="_self">
+    <form [formGroup]="oprecForm" method="POST" data-email="lumiere03.testing@gmail.com" class="gform"
+          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScXM-QOhi0zBpIBZvVGCmKnabOvpYMMf51NyjSypohtGY5LSA/formResponse" target="_self"
+          (ngSubmit)="prosedurMaju()">
       <div class="accordion rounded" id="accordionForm">
         <!-- start of bagian satu -->
         <div class="card-header" id="headingOne">
@@ -213,7 +214,7 @@
       </div> <!-- end of accordion div -->
 
       <div>
-        <button class="mt-3 press press-pill press-pink btn-block" type="submit">Kirimkan Data</button>
+        <button class="mt-3 press press-pill press-pink btn-block">Kirimkan Data</button>
       </div>
 
     </form>
