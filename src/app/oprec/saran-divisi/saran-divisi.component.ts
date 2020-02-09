@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {OprecApiService} from '../../_shared/services/oprec-api.service';
 import {SaranDivisi} from "../../_shared/models/oprec/saran_divisi";
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-saran-divisi',
@@ -26,6 +27,12 @@ export class SaranDivisiComponent implements OnInit {
     document.getElementById('oScore').innerHTML = `<i>Openness</i>:<br> <b> ${sessionStorage.getItem('oScore')}</b>`;
     this.oprecApiService.getSaranDivisi().subscribe(result => {
       this.data = result;
+    });
+
+    $(document).ready(function () {
+      $('html, body').animate({
+          scrollTop: $('#divisi').offset().top
+      }, 'slow');
     });
   }
 

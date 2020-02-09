@@ -1,9 +1,10 @@
 <div id="base-layer" class="container-fluid py-3">
   <div id="head"><h1>Divisi<br>MAXIMA</h1></div>
   <div id="esai-container" class="container pb-3 rounded">
-    <div class="card px-5 mb-3 pt-3 text-center container-fluid">
-      <h3>Hasil tes kamu menunjukkan...</h3>
-      <div class="row">
+    <div class="card px-5 mb-3 pt-3 container-fluid">
+      <h3 class="text-center">Hasil tes kamu menunjukkan...</h3>
+      <h6 class="text-center">(Scale 0-40)</h6>
+      <div class="row text-center">
         <div class="col">
           <p id="aScore" style="font-size: larger;"></p>
         </div>
@@ -20,8 +21,28 @@
           <p id="oScore" style="font-size: larger;"></p>
         </div>
       </div>
+      <div>
+
+      </div>
+      <div class="row pb-4 text-center" style="color: #1F2C4C">
+        <div class="card col p-2 valign">
+          Individu yang memiliki divisi ini cenderung kooperatif (dapat bekerjasama), penuh kepercayaan, bersifat baik, hangat dan berhati lembut serta suka membantu.
+        </div>
+        <div class="card col p-2 valign">
+          Individu yang memiliki divisi ini cenderung dapat diandalkan, bertanggung jawab, tekun, dan berorientasi pada pencapain.
+        </div>
+        <div class="card col p-2 valign">
+          Individu yang memiliki divisi ini cenderung senang bergaul, mudah bersosialisasi, hidup berkelompok, dan tegas.
+        </div>
+        <div class="card col p-2 valign">
+          Individu yang memiliki divisi ini cenderang tenang saat menghadapi masalah, percaya diri, dan memiliki pendirian yang teguh.
+        </div>
+        <div class="card col p-2 valign">
+          Individu yang memiliki dimensi ini cenderung lebih kreatif, imajinatif, intelektual, penasaran, dan berpikiran luas.
+        </div>
+      </div>
     </div>
-    <div class="row">
+    <div class="row" id="divisi">
       <div class="card-deck col-sm-4 pb-4 ml-auto mr-auto" *ngFor="let datum of data">
         <div class="card ml-auto mr-auto">
           <img class="card-img-top"
