@@ -1,0 +1,13 @@
+<div class="text-center pt-5">
+  <form (ngSubmit)="cariData()">
+    <label for="nimInput">Masukkan NIM:</label>
+    <input type="text" id="nimInput" [(ngModel)]="nimInput" [ngModelOptions]="{standalone: true}">
+    <button id="nimSubmit" type="submit" class="btn btn-primary" >Cari!</button>
+  </form>
+  <div id="pesan"></div>
+  <div id="nim"></div>
+  <div id="nama"></div>
+  <div id="prodi"></div>
+  <div id="divisi"></div>
+  <div id="ruangan"></div>
+</div>
