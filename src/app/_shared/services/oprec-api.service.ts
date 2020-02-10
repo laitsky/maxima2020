@@ -3,7 +3,8 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {BigFiveQuestions} from '../models/oprec/big_five_q';
 import {PertanyaanDivisi} from '../models/oprec/pertanyaan_divisi';
-import {SaranDivisi} from "../models/oprec/saran_divisi";
+import {SaranDivisi} from '../models/oprec/saran_divisi';
+import {NextStage} from '../models/oprec/next_stage';
 
 @Injectable({
   providedIn: 'root'
@@ -25,5 +26,9 @@ export class OprecApiService {
 
   getSaranDivisi(): Observable<SaranDivisi> { // mendapatkan informasi untuk SaranDivisiComponent
     return this.http.get<SaranDivisi>(`${this.API_URL}/api/saran_divisi.json`);
+  }
+
+  getNextStage(): Observable<NextStage[]> { // mendapatkan informasi seleksi selanjutnya
+    return this.http.get<NextStage[]>(`${this.API_URL}/api/next_stage.json`);
   }
 }

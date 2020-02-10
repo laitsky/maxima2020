@@ -18,6 +18,7 @@ import { FormOprecComponent } from './oprec/form-oprec/form-oprec.component';
 import { EsaiSingkatComponent } from './oprec/esai-singkat/esai-singkat.component';
 import { FinalisasiDataComponent } from './oprec/finalisasi-data/finalisasi-data.component';
 import { OprecTokenComponent } from './oprec/oprec-token/oprec-token.component';
+import { NextStageComponent } from './oprec/next-stage/next-stage.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { OprecTokenComponent } from './oprec/oprec-token/oprec-token.component';
     FormOprecComponent,
     EsaiSingkatComponent,
     FinalisasiDataComponent,
-    OprecTokenComponent
+    OprecTokenComponent,
+    NextStageComponent
   ],
   imports: [
     BrowserModule,

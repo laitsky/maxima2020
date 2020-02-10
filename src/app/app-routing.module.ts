@@ -7,12 +7,13 @@ import { PenilaianKepribadianComponent } from './oprec/penilaian-kepribadian/pen
 import { FinalisasiDataComponent } from './oprec/finalisasi-data/finalisasi-data.component';
 import { OprecTokenComponent } from './oprec/oprec-token/oprec-token.component';
 import {SaranDivisiComponent} from './oprec/saran-divisi/saran-divisi.component';
+import {NextStageComponent} from "./oprec/next-stage/next-stage.component";
 
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'oprec',
+    redirectTo: 'oprec/next-stage',
     pathMatch: 'full'
   },
   {
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path: 'oprec/oprec-token',
     component: OprecTokenComponent
+  },
+  {
+    path: 'oprec/next-stage',
+    component: NextStageComponent
   }
 ];
 
