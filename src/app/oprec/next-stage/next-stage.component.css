@@ -1,0 +1,23 @@
+#base-layer {
+  font-family: canaro-medium;
+  color: white;
+  background-image: url("/assets/next_stage.png");
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.font-bold {
+  font-family: canaro-bold;
+  font-weight: bolder;
+}
+
+input {
+  background-color: #F4224B;
+  color: white;
+  padding: 0.65em;
+  margin-left: 0.25em;
+  outline: none;
+  border: none;
+}

@@ -1,13 +1,29 @@
-<div class="text-center pt-5">
-  <form (ngSubmit)="cariData()">
-    <label for="nimInput">Masukkan NIM:</label>
-    <input type="text" id="nimInput" [(ngModel)]="nimInput" [ngModelOptions]="{standalone: true}">
-    <button id="nimSubmit" type="submit" class="btn btn-primary" >Cari!</button>
-  </form>
-  <div id="pesan"></div>
-  <div id="nim"></div>
-  <div id="nama"></div>
-  <div id="prodi"></div>
-  <div id="divisi"></div>
-  <div id="ruangan"></div>
+<div id="base-layer" class="pb-3">
+  <div class="text-center pt-5">
+    <img src="assets/mxm_yellow.png" alt="Logo Kuning MAXIMA 2020" class="img-fluid pb-3">
+    <form (ngSubmit)="cariData()">
+      <label for="nimInput" class="font-bold mxm-yellow" style="font-size: 1.15em">Masukkan NIM:</label>
+      <input type="text" id="nimInput" class="rounded" [(ngModel)]="nimInput" [ngModelOptions]="{standalone: true}">
+      <button id="nimSubmit" type="submit" class="press press-round press-raised press-yellow ml-2">Cari!</button>
+    </form>
+    <div style="letter-spacing: 3px;">
+      <div id="pesan" class="mxm-cyan"></div>
+      <div id="nama" class="mxm-yellow font-bold" style="font-size: 2.25em;"></div>
+      <div id="nim" class="mxm-cyan"></div>
+      <div id="divisi" class="mxm-yellow"></div>
+      <div id="tanggal" class="mxm-cyan"></div>
+      <div id="ruangan" class="mxm-pink font-bold"></div>
+      <div id="daful-msg" class="mt-5"></div>
+      <div id="daful-link"></div>
+    </div>
+    <div *ngIf="codeZero" id="sorry" style="letter-spacing: 3px;">
+      <h1 class="font-bold mxm-yellow">Perjalanan lain<br>menunggumu...</h1>
+      <h3 class="mxm-cyan my-5">Maaf, kamu belum berhasil memasuki tahap<br>seleksi terbuka MAXIMA 2020</h3>
+      <h5 class="mxm-yellow">Tetap semangat dan berikan yang terbaik</h5>
+    </div>
+    <div *ngIf="nimNotFound" id="not-found">
+      <h1 class="mxm-yellow font-bold">Sepertinya NIM yang<br>kamu masukkan salah...</h1>
+      <h5>Coba dicek lagi, ya?</h5>
+    </div>
+  </div>
 </div>
