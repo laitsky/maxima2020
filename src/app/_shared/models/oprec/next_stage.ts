@@ -4,5 +4,5 @@ export interface NextStage {
   divisi: string;
   ruangan: string;
   pesan: string;
-  kode: string;
+  kode: number;
 }
