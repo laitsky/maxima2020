@@ -25,7 +25,6 @@ export class NextStageComponent implements OnInit {
     this.isExist = false;
     this.oprecApiService.getNextStage().subscribe(result => {
         this.dataOprec = result;
-        console.log(this.dataOprec);
         // tslint:disable-next-line:prefer-for-of
         for (let i = 0; i < this.dataOprec.length; i++) {
           if (this.dataOprec[i].nim == this.nimInput) {
