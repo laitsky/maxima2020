@@ -3,9 +3,20 @@
     <img src="assets/mxm_yellow.png" alt="Logo Kuning MAXIMA 2020" class="img-fluid pb-3">
     <form (ngSubmit)="cariData()">
       <label for="nimInput" class="font-bold mxm-yellow" style="font-size: 1.15em">Masukkan NIM:<br><span style="font-size: 0.75em;">(5 digit terakhir)</span></label><br>
-      <input type="text" id="nimInput" class="rounded" [(ngModel)]="nimInput" [ngModelOptions]="{standalone: true}">
+      <div class="input-group mb-3 d-flex justify-content-center">
+        <div class="input-group-prepend">
+          <span class="input-group-text" style="background-color:#F4224B; border: none; color:white;">000000</span>
+        </div>
+        <input type="text" id="nimInput" style="border-radius: 0px 5px 5px 0px;" [(ngModel)]="nimInput" [ngModelOptions]="{standalone: true}">
+      </div>
+        <!-- <input type="text" id="nimInput" class="rounded" [(ngModel)]="nimInput" [ngModelOptions]="{standalone: true}"> -->
       <button id="nimSubmit" type="submit" class="press press-round press-raised press-yellow ml-2">Cari!</button>
-    </form>
+    </form> <br>
+    <div class="spinner" id="loadingSign">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
     <div style="letter-spacing: 3px;">
       <div id="pesan" class="mxm-cyan"></div>
       <div id="nama" class="mxm-yellow font-bold" style="font-size: 2.25em;"></div>

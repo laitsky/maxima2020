@@ -18,10 +18,16 @@ export class NextStageComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    document.getElementById('loadingSign').style.display = 'none';
   }
 
+  loadingSign() {
+    document.getElementById('loadingSign').style.display = 'none';
+  }
+  
   cariData() {
+    document.getElementById('loadingSign').style.display = 'inline';
+    setTimeout(this.loadingSign, 1000);
     this.isExist = false;
     this.oprecApiService.getNextStage().subscribe(result => {
         this.dataOprec = result;
