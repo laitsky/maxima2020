@@ -55,27 +55,6 @@ export class FinalisasiDataComponent implements OnInit {
 
   }
 
-  sendData() {
-    this.http
-      .post(
-        "http://laitsky.tech/api_test/product/create_oprec.php",
-        {
-          id_regis: 3,
-          nama_lengkap: sessionStorage.getItem('nama_lengkap'),
-          nim: sessionStorage.getItem('nim'),
-          angkatan: sessionStorage.getItem('angkatan')
-        },
-    this.httpOptions
-      ).subscribe(
-        res => {
-          if(res) {
-            console.log(res["message"]);
-          } else {
-            console.log("pengiriman data gagal!");
-          }
-        }
-    );
-  }
 
   hitungtoken(): void {
     var today = new Date();
