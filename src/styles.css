@@ -46,7 +46,19 @@
 }
 
 /* akhir dari media query placeholder */
-
+/* 4 PALET UTAMA MAXIMA */
+.mxm-pink {
+  color: #F4224B;
+}
+.mxm-yellow {
+  color: #FFD008;
+}
+.mxm-navy {
+  color: #1F2C4C;
+}
+.mxm-cyan {
+  color: #41CEBA;
+}
 /* press.css */
 .press {
   box-sizing: border-box;

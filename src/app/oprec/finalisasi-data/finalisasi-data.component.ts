@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 
 @Component({
   selector: 'app-finalisasi-data',
@@ -11,8 +12,12 @@ import {Router} from '@angular/router';
 export class FinalisasiDataComponent implements OnInit {
   oprecForm: FormGroup;
 
+  httpOptions = {
+    headers: new HttpHeaders({ "Content-Type": "application/json " })
+  };
   constructor(private formBuilder: FormBuilder,
-              private router: Router) {
+              private router: Router,
+              private http: HttpClient) {
   }
 
   ngOnInit(): void {
@@ -49,6 +54,7 @@ export class FinalisasiDataComponent implements OnInit {
     });
 
   }
+
 
   hitungtoken(): void {
     var today = new Date();
