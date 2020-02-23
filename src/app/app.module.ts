@@ -19,6 +19,7 @@ import { EsaiSingkatComponent } from './oprec/esai-singkat/esai-singkat.componen
 import { FinalisasiDataComponent } from './oprec/finalisasi-data/finalisasi-data.component';
 import { OprecTokenComponent } from './oprec/oprec-token/oprec-token.component';
 import { NextStageComponent } from './oprec/next-stage/next-stage.component';
+import { CongratulationsComponent } from './oprec/congratulations/congratulations.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NextStageComponent } from './oprec/next-stage/next-stage.component';
     EsaiSingkatComponent,
     FinalisasiDataComponent,
     OprecTokenComponent,
-    NextStageComponent
+    NextStageComponent,
+    CongratulationsComponent
   ],
   imports: [
     BrowserModule,
