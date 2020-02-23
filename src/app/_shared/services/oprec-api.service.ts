@@ -29,6 +29,6 @@ export class OprecApiService {
   }
 
   getNextStage(): Observable<NextStage[]> { // mendapatkan informasi seleksi selanjutnya
-    return this.http.get<NextStage[]>(`${this.API_URL}/api/next_stage.json`);
+    return this.http.get<NextStage[]>(`${this.API_URL}/api/congratulations.json`);
   }
 }

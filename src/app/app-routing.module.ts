@@ -1,12 +1,11 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {NextStageComponent} from "./oprec/next-stage/next-stage.component";
-
+import {CongratulationsComponent} from "./oprec/congratulations/congratulations.component";
 
 const routes: Routes = [
   {
     path: '',
-    component: NextStageComponent
+    component: CongratulationsComponent
   }
 
 ];
