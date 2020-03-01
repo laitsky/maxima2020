@@ -1,0 +1,38 @@
+<div id="base-layer" class="pb-3">
+  <div class="text-center pt-5">
+    <img src="assets/mxm_navy.png" id="logo-maxima" alt="Logo Kuning MAXIMA 2020" class="img-fluid pb-3">
+    <form (ngSubmit)="cariData()">
+      <label for="nimInput" class="font-bold mxm-navy" style="font-size: 1.15em">Masukkan NIM:<br><span style="font-size: 0.75em;">(5 digit terakhir)</span></label><br>
+      <div class="input-group mb-3 d-flex justify-content-center">
+        <div class="input-group-prepend">
+          <span class="input-group-text" style="background-color:#F4224B; border: none; color:white;">000000</span>
+        </div>
+        <input type="text" id="nimInput" style="border-radius: 0px 5px 5px 0px;" [(ngModel)]="nimInput" [ngModelOptions]="{standalone: true}">
+      </div>
+      <!-- <input type="text" id="nimInput" class="rounded" [(ngModel)]="nimInput" [ngModelOptions]="{standalone: true}"> -->
+      <button id="nimSubmit" type="submit" class="press press-round press-raised ml-2" style="color: white; background-color: #1F2C4C;">Cari!</button>
+    </form> <br>
+    <div class="spinner" id="loadingSign">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+    <div style="letter-spacing: 3px;">
+      <div id="pesan" class="mxm-pink font-bold"></div>
+      <div id="pesan2" class="mxm-pink pb-2"></div>
+      <div id="nama" class="mxm-navy font-bold pb-3" style="font-size: 2.25em;"></div>
+      <div id="nim" class="mxm-cyan pb-2"></div>
+      <div id="divisi" class="mxm-navy pb-2"></div>
+      <div id="email" class="mxm-pink font-bold"></div>
+    </div>
+    <div *ngIf="codeZero" id="sorry" style="letter-spacing: 3px;">
+      <h1 class="font-bold mxm-pink">Perjalanan lain<br>menunggumu...</h1>
+      <h3 class="mxm-navy my-5 mx-3">Maaf, sepertinya masih ada jalan lain yang menunggumu.<br>Jangan patah hati, tetap semangat!</h3>
+      <h5 class="mxm-pink mx-3">Kami tunggu ikut serta kamu di MAXIMA 2021.</h5>
+    </div>
+    <div *ngIf="nimNotFound" id="not-found">
+      <h1 class="mxm-pink font-bold">Sepertinya NIM yang<br>kamu masukkan salah...</h1>
+      <h5>Coba dicek lagi, ya?</h5>
+    </div>
+  </div>
+</div>
