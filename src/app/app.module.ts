@@ -20,6 +20,9 @@ import { FinalisasiDataComponent } from './oprec/finalisasi-data/finalisasi-data
 import { OprecTokenComponent } from './oprec/oprec-token/oprec-token.component';
 import { NextStageComponent } from './oprec/next-stage/next-stage.component';
 import { CongratulationsComponent } from './oprec/congratulations/congratulations.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './committee/login/login.component';
+import { RegisterComponent } from './committee/register/register.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { CongratulationsComponent } from './oprec/congratulations/congratulation
     FinalisasiDataComponent,
     OprecTokenComponent,
     NextStageComponent,
-    CongratulationsComponent
+    CongratulationsComponent,
+    HomeComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
