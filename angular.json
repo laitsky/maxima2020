@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "maxima2020"
+    }
+  },
+  "defaultProject": "maxima2020",
+  "cli": {
+    "analytics": "3275dfa4-b9fb-413c-9e70-ce0be944df05"
+  }
 }
