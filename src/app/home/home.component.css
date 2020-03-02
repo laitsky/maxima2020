@@ -1,0 +1,20 @@
+body{
+    background-color: #f4424B;
+    min-height: 100vh;
+}
+
+.text{
+    font-family: canaro-bold;
+    font-weight: bolder;
+}
+
+.center-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+}
+
+.mxmimg{
+    width: 10%;
+}
