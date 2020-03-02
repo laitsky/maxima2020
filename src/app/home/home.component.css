@@ -1,3 +1,7 @@
+img { 
+    max-width: 100%; 
+}
+
 body{
     background-color: #f4424B;
     min-height: 100vh;
@@ -15,6 +19,7 @@ body{
     height: fit-content;
 }
 
-.mxmimg{
-    width: 10%;
+#logo-maxima {
+    width: 105px;
+    height: 120px;
 }
