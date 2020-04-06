@@ -23,6 +23,8 @@ import { CongratulationsComponent } from './oprec/congratulations/congratulation
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './committee/login/login.component';
 import { RegisterComponent } from './committee/register/register.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,8 @@ import { RegisterComponent } from './committee/register/register.component';
     LoadingBarHttpClientModule,
     LoadingBarRouterModule,
     LoadingBarModule,
-    SweetAlert2Module.forRoot()
+    SweetAlert2Module.forRoot(),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
