@@ -1,0 +1,32 @@
+img {
+  max-width: 100%;
+}
+
+body {
+  background-color: #f4424B;
+  min-height: 100vh;
+}
+
+.text {
+  font-family: canaro-bold;
+  font-weight: bolder;
+}
+
+.center-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.resp-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
