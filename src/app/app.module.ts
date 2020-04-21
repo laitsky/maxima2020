@@ -25,6 +25,8 @@ import { LoginComponent } from './committee/login/login.component';
 import { RegisterComponent } from './committee/register/register.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { HeaderComponent } from './_shared/components/header/header.component';
+import { FooterComponent } from './_shared/components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { environment } from '../environments/environment';
     CongratulationsComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
