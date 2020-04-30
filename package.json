@@ -25,7 +25,7 @@
     "@ngx-loading-bar/router": "^4.2.0",
     "@sweetalert2/ngx-sweetalert2": "^7.3.0",
     "bootstrap": "^4.4.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "moment": "^2.24.0",
     "normalize.css": "^8.0.1",
     "rxjs": "~6.5.4",
